@@ -1,0 +1,3 @@
+/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles/SFMLProject.dir
+/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles/edit_cache.dir
+/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles/rebuild_cache.dir
