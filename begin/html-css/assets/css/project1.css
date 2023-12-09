@@ -1,0 +1,1076 @@
+/* reset css */
+* {
+    padding:0;
+    margin:0;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear{
+    clear:both;
+}
+
+:root{
+    --header-height: 46px;
+}
+
+.  {
+    margin-left:-8px;
+    margin-right:-8px;
+}
+
+.row::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.col{
+    float:left;
+    padding-left:8px;
+    padding-right:8px;
+    margin-left:-8px;
+    margin-right:-8px;
+}
+
+.col-third{
+    width:33.3333%;
+}
+
+.col-half{
+    width:50%;
+}
+
+.col-full{
+    width:100%;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+/* 
+    1. vị trí
+    2. kích thuớc
+    3. màu sắc
+    4. kiểu dáng
+*/
+
+
+
+#main{
+    overflow: hidden;
+}
+
+#header{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    height:var(--header-height);
+    background-color: #000; 
+    z-index: 2;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav{
+    display:inline-block;
+}
+
+#nav li{
+    display:inline-block;
+    position: relative;
+}
+
+#nav > li:hover > a, #nav .subnav li:hover a{
+    color:#000;
+    background-color:#ccc;
+    
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: var(--header-height);
+    display:inline-block;
+    padding: 0 24px;
+}
+
+#nav .subnav{
+    display:none;
+    position: absolute;
+    background-color: #fff;
+    min-width:90px;
+    top:100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li{
+    width:100%;
+
+}
+#nav .subnav a{
+    color: #000;
+    display: block;
+    padding: 2px 32px 2px 16px; 
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+    margin-left:4px;
+}
+
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon{
+    color:#fff;
+    line-height: var(--header-height);
+    font-size: 20px;
+}
+
+#header .menu-btn{
+    float: right;
+    padding: 0 21px;
+}
+
+#header .menu-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .menu-icon{
+    color:#fff;
+    line-height: var(--header-height);
+    font-size: 20px;
+}
+
+#slider{
+    background-color: green;
+    margin-top: var(--header-height);
+    padding-top: 50%;
+    background: url('/html-css/assets/img/slider/A1xwhbCsI2L._AC_UL1500_.jpg') top center/ cover no-repeat;
+    position:relative;
+}
+
+#slider .text-content{
+    position:absolute;
+    bottom:47px;
+    color:#fff;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+#slider .text-description{
+    font-size:15px;
+}
+
+#content{
+    background-color: #fff;
+}
+
+#content .content-section{
+    width:800px;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:64px 0;
+}
+
+#content .section-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+#content .about-text{
+    text-align: justify;
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+/* Sun */
+#content-Sun{
+    position:relative;
+    background: url(/html-css/assets/img/slider/sun-space.jpg) top center/cover no-repeat;
+    margin:0;
+    padding-top: 50%;
+    height:0px;
+    max-width:100%;
+    align-items: center;
+}
+
+#content-Sun .content-section-Sun{
+    position:absolute;
+    min-width:332px;
+    max-height:525px;
+    bottom:0;
+    margin: 0 0 28% 12%;
+    width:332px;
+}
+
+#content-Sun .section-heading-Sun{
+    color:#fff;
+    font-size:64px;
+    opacity:1;
+    letter-spacing: 4px;
+}
+
+#content-Sun .section-sub-heading-Sun{
+    color:#fff;
+    font-size:16px;
+    opacity: 0.9;
+    max-width:150px;
+    letter-spacing: 4px;
+    display: inline;
+    margin-top:4px;
+}
+
+.content-detail-Sun{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    height:72px;
+}
+
+.list-option-Sun{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 11.5px;
+}
+
+.detail-Sun{
+
+}
+
+.detail-Sun-orange{
+    color: #ff6f00;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.detail-Sun-white{
+    color: white;
+    font-family: sans-serif;
+    font-size:20px;
+    margin-top:8px;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Sun */
+/* Earth */
+#content-Earth{
+    position:relative;
+    background: url(/html-css/assets/img/slider/552701.jpg) top center/cover no-repeat;
+    margin:0;
+    padding-top: 50%;
+    height:0px;
+    width:100%;
+    align-items: center;
+}
+
+#content-Earth .content-section-Earth{
+    position:absolute;
+    min-width:332px;
+    max-height:525px;
+    bottom:0;
+    margin: 0% 0% 28% 68%;
+    width:332px;
+}
+
+#content-Earth .section-heading-Earth{
+    color:#fff;
+    font-size:64px;
+    opacity:0.7;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+#content-Earth .section-sub-heading-Earth{
+    color:#fff;
+    font-size:16px;
+    opacity: 0.7;
+    max-width:150px;
+    letter-spacing: 4px;
+    display: inline;
+    margin-top:4px;
+}
+
+.content-detail-Earth{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    height:72px;
+}
+
+.list-option-Earth{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 11.5px;
+}
+
+.detail-Earth{
+
+}
+
+.detail-Earth-blue{
+    color: #5592c6;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.detail-Earth-white{
+    color: white;
+    font-family: sans-serif;
+    font-size:20px;
+    margin-top:8px;
+    text-align: center;
+    font-weight: 300;
+}
+/* Earth */
+/* Mercury */
+#content-Mercury.Mercury{
+    position: relative;
+    width:100%;
+    height:0px;
+    padding-top:50%;
+    background: url(/html-css/assets/img/slider/Mercury\ Surface.jpg) top center/cover no-repeat;
+}
+.content-section.Mercury{
+    position:absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    color:#fff;
+    margin-top: 16px;
+}
+
+.content-section.Mercury h2{
+    display:flex;
+    justify-content: center;
+}
+
+#content-Mercury .Mercury-list{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 220px);
+    list-style:none;
+    color:#fbb00e;
+    background-color: rgba(0,0,0,0.3);
+    height: 36z0px;
+    width: 730px;
+}
+
+#content-Mercury .detail-Mercury{
+    /* margin-left:50px; */
+    height: 25%;
+    line-height: 90px;
+    /* font-family: monospace;
+    opacity:0.9;
+    font-weight: 500;
+    font-size: 16px; */
+
+}
+
+#content-Mercury .detail-Mercury h1{
+    line-height: 90px;
+    font-family: monospace;
+    opacity:0.9;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 50px;
+    display:inline-block;
+    text-transform: uppercase;
+}
+
+#content-Mercury .detail-Mercury p{
+    line-height: 90px;
+    font-family: sans-serif;
+    opacity:0.9;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 50px;
+    display:inline-block;
+    color:#fff;
+}
+
+#content-Mercury .detail-Mercury::before{
+    content:"";
+    display:block;
+    width:730px;
+    height:1px;
+    background-color: #000;
+    opacity: 0.8;
+}
+#content-Mercury .detail-Mercury:last-child::after{
+    content:"";
+    display:block;
+    width:730px;
+    height:1px;
+    opacity: 0.8;
+    background-color: #000;
+}
+/* Mercury */
+/* Jupiter */
+#content-Jupiter{
+    position:relative;
+    background: url(/html-css/assets/img/slider/O9bIfuE.jpg) top center/cover no-repeat;
+    margin:0;
+    padding-top: 50%;
+    height:0px;
+    width:100%;
+    align-items: center;
+}
+
+#content-Jupiter .content-section-Jupiter{
+    position:absolute;
+    min-width:332px;
+    max-height:525px;
+    bottom:0;
+    margin: 0 0 28% 12%;
+    width:332px;
+}
+
+#content-Jupiter .section-heading-Jupiter{
+    color:#fff;
+    font-size:64px;
+    opacity:0.7;
+    letter-spacing: 4px;
+}
+
+#content-Jupiter .section-sub-heading-Jupiter{
+    color:#fff;
+    font-size:16px;
+    opacity: 0.7;
+    max-width:150px;
+    letter-spacing: 4px;
+    display: inline;
+    margin-top:4px;
+}
+
+.content-detail-Jupiter{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    height:72px;
+}
+
+.list-option-Jupiter{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 11.5px;
+}
+
+.detail-Jupiter{
+
+}
+
+.detail-Jupiter-red{
+    color: #e96a76;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.detail-Jupiter-white{
+    color: white;
+    font-family: sans-serif;
+    font-size:20px;
+    margin-top:8px;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Jupiter */
+/* Mars */
+#content-Mars{
+    position:relative;
+    background: url(/html-css/assets/img/slider/planet-mars-5yttoBT8kR4-1024x576.webp) top center/cover no-repeat;
+    margin:0;
+    padding-top: 50%;
+    height:0px;
+    width:100%;
+    align-items: center;
+}
+
+#content-Mars .content-section-Mars{
+    position:absolute;
+    min-width:332px;
+    max-height:525px;
+    bottom:0;
+    margin: 0 0 28% 12%;
+    width:332px;
+}
+
+#content-Mars .section-heading-Mars{
+    color:#fff;
+    font-size:64px;
+    opacity:0.7;
+    letter-spacing: 4px;
+}
+
+#content-Mars .section-sub-heading-Mars{
+    color:#fff;
+    font-size:16px;
+    opacity: 0.7;
+    max-width:150px;
+    letter-spacing: 4px;
+    display: inline;
+    margin-top:4px;
+}
+
+.content-detail-Mars{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    height:72px;
+}
+
+.list-option-Mars{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 11.5px;
+}
+
+.detail-Mars{
+
+}
+
+.detail-Mars-white{
+    color: #e4e4e4;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.detail-Mars-blue{
+    color: #fbb00e;
+    font-family: monospace;
+    font-size:16px;
+    margin-top:8px;
+    text-align: center;
+    font-weight: 300;
+}
+/* Mars */
+
+/* Uranus */
+#content-Uranus{
+    position:relative;
+    background: url(/html-css/assets/img/slider/362115981_1415939072517025_2451212933053528524_n\ \(1\).jpg) top center/cover no-repeat;
+    margin:0;
+    padding-top: 50%;
+    height:0px;
+    width:100%;
+    align-items: center;
+}
+
+#content-Uranus .content-section-Uranus{
+    position:absolute;
+    min-width:332px;
+    max-height:525px;
+    bottom:0;
+    margin: 0 0 28% 12%;
+    width:332px;
+}
+
+#content-Uranus .section-heading-Uranus{
+    color:#fff;
+    font-size:64px;
+    opacity:0.7;
+    letter-spacing: 4px;
+}
+
+#content-Uranus .section-sub-heading-Uranus{
+    color:#fff;
+    font-size:16px;
+    opacity: 0.7;
+    max-width:150px;
+    letter-spacing: 4px;
+    display: inline;
+    margin-top:4px;
+}
+
+.content-detail-Uranus{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    height:72px;
+}
+
+.list-option-Uranus{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 11.5px;
+}
+
+.detail-Uranus{
+
+}
+
+.detail-Uranus-blue{
+    color: #89ebff;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.detail-Uranus-white{
+    color: white;
+    font-family: sans-serif;
+    font-size:20px;
+    margin-top:8px;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+/* Uranus */
+/* Neptune */
+#content-Neptune{
+    position:relative;
+    background: url(/html-css/assets/img/slider/realistic-beautiful-planet-neptune-from-deep-space_bkbtgglgtg_thumbnail-1080_01.png) top center/cover no-repeat;
+    margin:0;
+    padding-top: 50%;
+    height:0px;
+    width:100%;
+    align-items: center;
+}
+
+#content-Neptune .content-section-Neptune{
+    position:absolute;
+    min-width:332px;
+    max-height:525px;
+    bottom:0;
+    margin: 0% 0% 28% 68%;
+    width:332px;
+    text-align: center;
+}
+
+#content-Neptune .section-heading-Neptune{
+    color:#fff;
+    font-size:64px;
+    opacity:0.7;
+    letter-spacing: 4px;
+}
+
+#content-Neptune .section-sub-heading-Neptune{
+    color:#fff;
+    font-size:16px;
+    opacity: 0.7;
+    max-width:150px;
+    letter-spacing: 4px;
+    display: inline;
+    margin-top:4px;
+}
+
+.content-detail-Neptune{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    height:72px;
+}
+
+.list-option-Neptune{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 11.5px;
+}
+
+.detail-Neptune{
+
+}
+
+.detail-Neptune-blue{
+    color: #97b7ff;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.detail-Neptune-white{
+    color: white;
+    font-family: sans-serif;
+    font-size:20px;
+    margin-top:8px;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+/* Neptune */
+
+/* Tour */
+#content.tour{
+    height:800px;
+}
+.tour-wrap{
+    height:100%;
+    background-color: #000;
+}
+.section-heading.tour{
+    color:#fff;
+}
+.section-sub-heading.tour{
+    color:#fff;
+}
+
+.tickets-list{
+    background-color: #fff;
+    margin-top:40px;
+    list-style: none;
+}
+
+.tickets-list li{
+    color:#757575;
+    font-size:15px;
+    padding:11px 16px;
+    border-bottom:1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    background-color:#f44336;
+    color:#fff;
+    padding: 3px 4px;
+    margin-left:16px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    color: white;
+    height: 24px;
+    background: #000;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    margin-top:-2px;
+}
+
+.place-list{
+    margin-top: 32px;
+}
+
+.place-item{
+    float:left;
+    width:31.3%;
+    padding:0 16px;
+    margin:0 -8px;
+    height:250px;
+}
+
+.place-image{
+    width:100%;
+    height:75%;
+    display:block;
+}
+
+.place-image:hover{
+    opacity: 0.7;
+}
+
+.place-body{
+    padding:16px; 
+    background-color: #fff;
+}
+
+.place-heading{
+    font-size:15px;
+    font-weight: 550; 
+}
+
+.place-time{
+    margin-top:15px;
+    color:#757575;
+}
+
+.place-desc{
+    margin-top:15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn{
+    padding: 11px 16px;
+    color:#fff;
+    text-decoration: none;
+    background-color: #000;
+    display:inline-block;
+    margin-top:25px;
+    border: 1px solid #ccc;
+}
+.place-buy-btn:hover{
+    color:#000;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+/* Tour */
+/* Contact */
+.contact-content{
+    margin-top:54px;
+}
+.contact-content .contact-info{
+    font-size:18px;
+    line-height:1.4; 
+}
+
+.contact-info i[class*="ti-"] {
+    width:30px;
+    display: inline-block;
+    margin-right:16px;
+}
+
+.contact-message{
+    width:400px;
+}
+
+.contact-form{
+    font-size:15px;
+}
+
+.form-control{
+    padding:11px;
+    border:1px solid #ccc;
+    width: calc(100% - 32px);
+}
+
+.form-submit-btn{ 
+    border:none;
+    color:#fff;
+    background-color: #000;
+    padding:10px 16px;
+    float:right;
+    outline:none;
+}
+
+.form-submit-btn:hover{
+    cursor: pointer;
+    opacity:0.6;
+}
+
+/* Contact */
+
+
+/* Footer */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list{
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    color:rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+    color:rgba(0,0,0,0.3);
+     
+}
+
+.copyright{
+    color:rgba(0,0,0,0.6);
+    margin-top: 16px;
+}
+.copyright a{
+    color:rgba(0,0,0,0.6);
+} 
+
+#footer 
+
+
+
+/* Modal */
+
+.alibaba{
+    position: fixed;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display:none;
+}
+
+/* .modal.open{
+    display:flex;
+} */
+
+.modal{
+    display:none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width:900px;
+    min-height: 200px;
+    position:relative;
+    max-width: calc(100% - 32px);
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header{
+    background-color: #374DA7;
+    height:130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    color:#fff;
+}
+
+.modal-header .ti-bag{
+    margin-right:16px;
+}
+
+.modal-container .modal-close{
+    position:absolute;
+    right:0;
+    top:0;
+    color:#fff;
+    padding:12px;
+    opacity: 1;
+}
+
+.modal-container .modal-close:hover{
+    cursor: pointer;
+    opacity:0.8;
+}
+
+.modal-body{
+    padding:16px;
+}
+
+.modal-label{
+    display:block;
+    font-size: 18px;
+    margin-bottom:12px;
+}
+
+.modal-input{
+    padding: 12px 0 12px 12px;
+    border: 1px solid #ccc;
+    width: calc(100% - 12px);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#buy-tickets{
+    color: #fff;
+    height: 56px;
+    width: 100%;
+    font-size: 18px;
+    background-color: #374DA7;
+    margin-top:12px;
+    border:none;
+    margin-bottom: 16px;
+}
+
+#buy-tickets:hover{
+    opacity:0.85;
+    cursor: pointer;
+}
+
+.modal-footer{
+    padding:16px;
+    text-align: right;
+}
+
+.modal-footer a{
+    color:#374DA7;
+}
+
+.modal-footer a:hover {
+    opacity:0.5;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-100px);
+        opacity:0;
+    } to {
+        transform: translateY(0);
+        opacity:1;
+    }
+}

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="./assets/css/project1.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons.css">
+
+    <style>
+        @media(min-width: 1024px){
+            #header .menu-btn{
+                display:none;
+            }
+        }
+        @media(min-width: 740px) and (max-width: 1023px){
+            #header{
+                max-width: 820px;
+            }
+            .Mercury-list{
+                display: none;
+            }      
+            .content-section-Earth{
+                margin: 0% 0% 28% 64%;
+            }
+            .content-section-Earth{
+                margin: 0% 0% 28% 60%;
+            }
+
+            .section-sub-heading-Sun,
+            .section-sub-heading-Earth,
+            .section-sub-heading-Jupiter,
+            .section-sub-heading-Mars,
+            .section-sub-heading-Uranus,
+            .section-sub-heading-Neptune{
+                display: none !important;
+            }
+            
+        }
+        @media(max-width:740px){
+            #nav li {
+                display:block;
+            }
+            #header{
+                overflow: hidden;
+            }
+            .Mercury-list{
+                display: none;
+            }
+            .section-sub-heading-Sun,
+            .section-sub-heading-Earth,
+            .section-sub-heading-Jupiter,
+            .section-sub-heading-Mars,
+            .section-sub-heading-Uranus,
+            .section-sub-heading-Neptune,
+            .section-heading-Sun,
+            .section-heading-Earth,
+            .section-heading-Jupiter,
+            .section-heading-Mars,
+            .section-heading-Uranus,
+            .section-heading-Neptune,
+            .content-detail-Sun,
+            .content-detail-Earth,
+            .content-detail-Jupiter,
+            .content-detail-Mars,
+            .content-detail-Uranus,
+            .content-detail-Neptune,
+            .content-section.Mercury,
+            .text-description,
+            .text-heading{
+                display: none !important;
+            }
+
+            .place-list{
+                display:flex;
+            }
+
+            #header .search-btn{
+                display:none;
+            }
+
+            #header .menu-btn{
+                display:block;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <div id="header">
+            <!-- <div id="wrapnav"> -->
+                <div class="nav">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#">Solar System</a>
+                        </li>
+                        <li>
+                            <a href="#content-Sun">Sun</a>
+                        </li>
+                        <li>
+                            <a href="#content-Earth">Earth</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                More
+                                <i class="nav-arrow-down ti-angle-down"></i>
+                            </a>
+                            <ul class="subnav">
+                                <li><a href="#content-Mercury">Mercury</a></li>
+                                <li><a href="#content-Jupiter">Jupiter</a></li>
+                                <li><a href="#content-Mars">Mars</a></li>
+                                <li><a href="#content-Uranus">Uranus</a></li>
+                                <li><a href="#content-Neptune">Neptune</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#content">Tour</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-btn">
+                    <i class="search-icon ti-search"></i>
+                </div>
+                <div class="menu-btn">
+                    <i class="menu-icon ti-menu"></i>
+                </div>
+            <!-- </div> -->
+        </div>
+
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">Solar System</h2>
+                <p class="text-description">Our solar system consists of our star, the Sun, and everything bound to it by gravity</p>
+            </div>
+        </div>
+        <div id="content-Sun">
+            <div class="content-section-Sun">
+                <h1 class="section-heading-Sun">Sun</h1>
+                <p class="section-sub-heading-Sun">The Sun holds the solar system together, keeping everything – from the biggest planets to the smallest debris – in its orbit.</p>
+            </div>
+             <div class="content-detail-Sun">
+                <ul class="list-option-Sun">
+                    <li class="detail-Sun">
+                        <p class="detail-Sun-orange">Star-type</p>
+                        <p class="detail-Sun-white">Yellow Dwarf</p>
+                    </li>
+                    <li class="detail-Sun">
+                        <p class="detail-Sun-orange">Age</p>
+                        <p class="detail-Sun-white">~4.6 billion years</p>
+                        
+                    </li>
+                    <li class="detail-Sun">
+                        <p class="detail-Sun-orange">Distance from galestic center</p>
+                        <p class="detail-Sun-white">26,000 light years</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content-Earth">
+            <div class="content-section-Earth">
+                <h1 class="section-heading-Earth">Earth</h1>
+                <p class="section-sub-heading-Earth">Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.</p>
+            </div>
+             <div class="content-detail-Earth">
+                    <ul class="list-option-Earth">
+                        <li class="detail-Earth">
+                            <p class="detail-Earth-blue">Distance from sun</p>
+                            <p class="detail-Earth-white">94 946 832 KM</p>
+                        </li>
+                        <li class="detail-Earth">
+                            <p class="detail-Earth-blue">One way light time to the sun</p>
+                            <p class="detail-Earth-white">8.451582 mins</p>
+                            
+                        </li>
+                        <li class="detail-Earth">
+                            <p class="detail-Earth-blue">Lengh of year</p>
+                            <p class="detail-Earth-white">365 Earth Days</p>
+                        </li>
+                        <li class="detail-Earth">
+                            <p class="detail-Earth-blue">Planet type</p>
+                            <p class="detail-Earth-white">Terrestrial</p>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div id="content-Mercury" class="Mercury">
+            <div class="content-section Mercury">
+                <h2 class="section-heading">Mercury</h2>
+                <p class="section-sub-heading">Mercury is the smallest planet in our solar system</p>
+            </div>
+            <ul class="Mercury-list">
+                <li class="detail-Mercury">
+                    <h1>Distance from sun</h1>
+                    <p>37,661,379 KM</p>
+                </li>
+                <li class="detail-Mercury">
+                    <h1>One way light time to the sun</h1>
+                    <p>3.369577 mins</p>
+                </li>
+                <li class="detail-Mercury">
+                    <h1>Lengh of year</h1>
+                    <p>88 Earth Days</p> 
+                </li>
+                <li class="detail-Mercury">
+                    <h1>Planet type</h1>
+                    <p>Terrestrial</p>
+                </li>
+            </ul>
+        </div>
+        <div id="content-Jupiter">
+            <div class="content-section-Jupiter">
+                <h1 class="section-heading-Jupiter">Jupiter</h1>
+                <p class="section-sub-heading-Jupiter">Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red Spot is a centuries-old storm bigger than Earth.</p>
+            </div>
+             <div class="content-detail-Jupiter">
+                <ul class="list-option-Jupiter">
+                    <li class="detail-Jupiter">
+                        <p class="detail-Jupiter-red">Distance from sun</p>
+                        <p class="detail-Jupiter-white">461,095,265 KM</p>
+                    </li>
+                    <li class="detail-Jupiter">
+                        <p class="detail-Jupiter-red">One way light time to the sun</p>
+                        <p class="detail-Jupiter-white">41.254193 mins</p>
+                        
+                    </li>
+                    <li class="detail-Jupiter">
+                        <p class="detail-Jupiter-red">Lengh of year</p>
+                        <p class="detail-Jupiter-white">4,333 Earth Days</p>
+                    </li>
+                    <li class="detail-Jupiter">
+                        <p class="detail-Jupiter-red">Planet type</p>
+                        <p class="detail-Jupiter-white">Gas Giant</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content-Mars">
+            <div class="content-section-Mars">
+                <h1 class="section-heading-Mars">Mars</h1>
+                <p class="section-sub-heading-Mars">Mars is a planet. It is the fourth planet from the Sun. It is the next planet beyond Earth. Mars is more than 142 million miles from the Sun. The planet is about half the size of Earth. A day on Mars is 24.6 hours. A year on Mars is 687 Earth days.</p>
+            </div>
+             <div class="content-detail-Mars">
+                <ul class="list-option-Mars">
+                    <li class="detail-Mars">
+                        <p class="detail-Mars-white">Curiosity</p>
+                        <p class="detail-Mars-blue">3893 SOLS ON MARS</p>
+                    </li>
+                    <li class="detail-Mars">
+                        <p class="detail-Mars-white">Preserverance</p>
+                        <p class="detail-Mars-blue">858 SOLS ON MARS</p>
+                        
+                    </li>
+                    <li class="detail-Mars">
+                        <p class="detail-Mars-white">Orbiters</p>
+                        <p class="detail-Mars-blue">3 MISSIONS AT MARS</p>
+                    </li>
+                    <li class="detail-Mars">
+                        <p class="detail-Mars-white">Future</p>
+                        <p class="detail-Mars-blue">WHAT'S NEXT</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content-Uranus">
+            <div class="content-section-Uranus">
+                <h1 class="section-heading-Uranus">Uranus</h1>
+                <p class="section-sub-heading-Uranus">Uranus is an ice giant (instead of a gas giant). It is mostly made of flowing icy materials above a solid core. Uranus has a thick atmosphere made of methane, hydrogen, and helium. Uranus is the only planet that spins on its side. Uranus spins the opposite direction as Earth and most other planets..</p>
+            </div>
+             <div class="content-detail-Uranus">
+                <ul class="list-option-Uranus">
+                    <li class="detail-Uranus">
+                        <p class="detail-Uranus-blue">Distance from sun</p>
+                        <p class="detail-Uranus-white">1 863 725 741 KM</p>
+                    </li>
+                    <li class="detail-Uranus">
+                        <p class="detail-Uranus-blue">One way light time to the sun</p>
+                        <p class="detail-Uranus-white">163.335470 mins</p>
+                        
+                    </li>
+                    <li class="detail-Uranus">
+                        <p class="detail-Uranus-blue">Lengh of year</p>
+                        <p class="detail-Uranus-white">30,687 Earth Days</p>
+                    </li>
+                    <li class="detail-Uranus">
+                        <p class="detail-Uranus-blue">Planet Type</p>
+                        <p class="detail-Uranus-white">Ice Giant</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content-Neptune">
+            <div class="content-section-Neptune">
+                <h1 class="section-heading-Neptune">Neptune</h1>
+                <p class="section-sub-heading-Neptune">Neptune is the eighth planet from the Sun and the farthest known planet in the Solar System. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus.</p>
+            </div>
+             <div class="content-detail-Neptune">
+                <ul class="list-option-Neptune">
+                    <li class="detail-Neptune">
+                        <p class="detail-Neptune-blue">Distance from sun</p>
+                        <p class="detail-Neptune-white">2,780,105,482 KM</p>
+                    </li>
+                    <li class="detail-Neptune">
+                        <p class="detail-Neptune-blue">One way light time to the sun</p>
+                        <p class="detail-Neptune-white">248.735825 mins</p>
+                        
+                    </li>
+                    <li class="detail-Neptune">
+                        <p class="detail-Neptune-blue">Lengh of year</p>
+                        <p class="detail-Neptune-white">60.190 Earth Days</p>
+                    </li>
+                    <li class="detail-Neptune">
+                        <p class="detail-Neptune-blue">Planet Type</p>
+                        <p class="detail-Neptune-white">Ice Giant</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content" class="tour">
+            <div class="tour-wrap">
+                <div class="content-section">
+                    <h1 class="section-heading tour">Tour dates</h1>
+                    <p class="section-sub-heading tour">Remember to book your tickets!</p>
+                    <ul class="tickets-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                    </ul>
+                    
+                    <!-- Places -->
+                    <div class="place-list">
+                        <div class="place-item">
+                            <img src="./assets/img/slider/Mars_Orbiter_Mission_Over_Mars_(15237158879).jpg" alt="Mars" class="place-image">
+                            <div class="place-body">
+                                <h3 class="place-heading">Mars</h3>
+                                <p class="place-time">Thu 20 July 2024</p>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="place-item">
+                            <img src="./assets/img/slider/uranus-seen-from-ariel-illustration-royalty-free-illustration-1683732107.jpg" alt="Uranus" class="place-image">
+                            <div class="place-body">
+                                <h3 class="place-heading">Uranus</h3>
+                                <p class="place-time">Sat 22 July 2024</p>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="place-item">
+                            <img src="./assets/img/slider/5b153ee71ae6621e008b487d.webp" alt="Jupiter" class="place-image">
+                            <div class="place-body">
+                                <h3 class="place-heading">Jupiter</h3>
+                                <p class="place-time">Sun 23 July 2024</p>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-section">
+                <h1 class="section-heading">Contact</h1>
+                <p class="section-sub-heading">Drop a note</p>
+
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin"></i>Vietnam</p>
+                        <p><i class="ti-mobile"></i>0924031093</p>
+                        <p><i class="ti-email"></i>nguyentansangxd@gmail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="" required placeholder="Name" class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" name="" placeholder="Email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" class="form-control"></input>
+                                </div>
+                            </div>
+                            <input type="submit" value="SEND" class="form-submit-btn mt-16">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div id="footer">
+            <div class="socials-list">
+                <a href=""><i class ="ti-facebook"></i></a>
+                <a href=""><i class ="ti-instagram"></i></a>
+                <a href=""><i class ="ti-twitter"></i></a>
+                <a href=""><i class ="ti-pinterest"></i></a>
+                <a href=""><i class ="ti-linkedin"></i></a>
+                <a href=""><i class ="ti-youtube"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="">nts</a></p>
+        </div>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                <i class="ti-bag"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets. $1500 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="ticket-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...">
+                <button id="buy-tickets">
+                    Pay <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket');
+        const modal = document.querySelector('.js-modal');
+        const modalClose = document.querySelector('.js-modal-close');
+        const modalContainer = document.querySelector('.js-modal-container');
+
+        function showBuyTickets(){
+            modal.classList.add('open');
+        }
+
+        function hideBuyTickets(){
+            modal.classList.remove('open');
+        }
+        
+        modalClose.addEventListener('click', hideBuyTickets);
+
+        for( const buyBtn of buyBtns){
+            buyBtn.addEventListener('click', showBuyTickets);
+        }
+
+        modal.addEventListener('click', hideBuyTickets);
+
+        modalContainer.addEventListener('click', function(event){
+            event.stopPropagation();
+        })
+    </script>
+</body>
+</html> 

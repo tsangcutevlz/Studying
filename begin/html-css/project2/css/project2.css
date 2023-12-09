@@ -1,0 +1,725 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root{
+    --header-height: 52px;
+    --p2font-size: 20px;
+}
+
+.row::after{
+    content:"";
+    display:block;
+}
+
+.col{
+    float:left;
+    padding-left:8px;
+    padding-right:8px;
+    margin-left:-8px;
+    margin-right:-8px;
+}
+
+.col-third{
+    width:33.3333%;
+}
+
+.col-half{
+    width:50%;
+}
+
+.col-full{
+    width:100%;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.mt-4{
+    margin-top: 4px !important;
+}
+
+.mt-32{
+    margin-top: 32px !important;
+}
+/* ------------------- --------- -------------------*/
+
+#main{
+    width:100%;
+    /* height: 800px; */
+    background-color: #ccc;
+}
+
+#header{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    height:var(--header-height);
+    background-color: #000;
+    z-index: 2;
+}
+
+.nav{
+    position:relative;
+    height: 100%;
+
+}
+
+.nav-list{
+    height: 100%;
+    list-style: none;   
+
+}
+
+.nav-list li{
+    display: block;
+    position: relative;
+}
+/* 
+.nav-list > li::after{
+    position: absolute;
+    content:"";
+    display: block;
+    width: 1px;
+    height:var(--header-height);
+    background-color: #ccc;
+    top:0;
+    right:0;
+    opacity: 0.5;
+}
+
+.nav-list li:first-child::before{
+    position: absolute;
+    content:"";
+    display: block;
+    width: 1px;
+    height:var(--header-height);
+    background-color: #ccc;
+    top:0;
+    left:0;
+    opacity: 0.5;
+} */
+
+
+.nav-list > li{
+    padding: 16.7px;
+    text-decoration: none;
+    display: block;
+    float: left;
+}
+
+
+.nav-list > li > a{
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+}
+
+.subnav{
+    position: absolute;
+    min-width:90px;
+    top:0;
+    left:0;
+    margin-top: var(--header-height);
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display:none;
+}
+
+.nav-list li:hover .subnav{
+    display: block !important;
+}
+
+.subnav li{
+    list-style: none;
+    padding: 16px 17px;
+}
+
+.subnav li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.subnav li:hover a {
+    color:#000;
+}
+
+.subnav-item{
+    text-decoration: none;
+    list-style: none;
+    display:flex;
+
+}
+
+.menu-btn{
+    position:absolute;
+    right:0;
+    top:0;
+    color:#fff;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.menu-btn .ti-menu{
+    display:flex;
+}
+
+.nav-list li:hover{
+    color: #000 !important;;
+    background-color:#ccc;
+    cursor: pointer;
+}
+
+.subnav li:hover{
+    color: #000 !important;;
+    background-color:#ccc;
+    cursor: pointer;
+}
+
+.nav-list > li:hover > a,.nav-list > li:hover > i {
+    color:#000;
+}
+
+.nav-arrow-down{
+    color:#fff;
+    margin-left: 8px;
+}
+
+.menu-btn:hover{
+    color:#000;
+    background-color:#ccc;
+    cursor: pointer;
+}
+
+/* Slider */
+#slider{
+    height:0;
+    margin-top: var(--header-height);
+    padding-top:50%;
+    background: url(../img/free-will-astrology.jpg) top center/ cover no-repeat;
+    color:#ccc;
+    text-shadow: 1px 1px #000;
+    font-size:var(--p2font-size);
+    position:relative;
+    text-align: center;
+}
+
+.text-content{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    transform: translateY(-32px);
+
+}
+
+.text-title{
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+}
+
+.text-description{
+
+}
+/* End Slider */
+/* Slider description */
+#page-description{
+    position: relative;
+    height:200px;
+    background-color: #2d2e30;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+}
+
+.page-text-description{
+    transform: translateY(42px);
+    position: absolute;    
+    color: #fff;
+    opacity: 0.8;
+}
+
+
+/* End slider description */
+/* Content */
+.content{
+    position: relative;
+    padding-top:50%;
+    text-align: center;
+    font-size:var(--p2font-size);
+}
+
+.content-section{
+    position:absolute;
+    font-size:var(--p2font-size);
+    text-align: center;
+}
+
+.section-heading{
+
+}
+
+.section-sub-heading{
+
+}
+/* End content */
+/* Aries */
+.content.Aries{
+    background: url(../img/Aries-watercolour-ink-paper-manuscript-Ulm-Augsburg.jpg.webp) top center/ cover no-repeat;
+}
+
+.content-section.Aries{
+    margin-right:32px;
+    margin-bottom: 48px;
+    color:#c58f35;
+    text-shadow: 1px 1px #a92e22;
+    bottom:0;
+    right:0;
+}
+
+.content-section.Aries .section-heading{
+    font-size: 60px;
+}
+
+.content-section.Aries .section-sub-heading{
+    font-size:32px;
+}
+
+#page-description.Aries{
+    background-color:#e9dcba;
+}
+
+#page-description.Aries .page-text-description{
+    color:#493a20;
+    font-weight: 550;
+    /* text-shadow: 1px 1px #000; */
+}
+/* End Aries */
+/* Taurus */
+.content.Taurus{
+    position:relative;
+    background: url(../img/Taurus_\(1\)_1647280208870_1647280229441.jpg.webp) top center/ cover no-repeat;
+    color:#ccc;
+    text-shadow: 1px 1px #000;
+
+}
+
+.content-section.Taurus{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin-top: 32px;
+    /* transform: translateX(42px); */
+}
+
+.content-section.Taurus .section-heading{
+    font-size: 48px;
+}
+
+.content-section.Taurus .section-sub-heading{
+    font-size:32px;
+}
+
+
+#page-description.Taurus{
+    background-color: #000;
+}
+
+
+/* End taurus */
+/* Gemini */
+.content.Gemini{
+    position:relative;
+    color:#c49139;
+    background: url(../img/depositphotos_126887116-stock-illustration-zodiac-sign-gemini-watercolor-illustration.jpg) top center/ cover no-repeat;
+}
+.content-section.Gemini{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    text-shadow: 1px 1px #8b4907;
+    margin-top: 32px;
+}
+
+#page-description.Gemini{
+    background-color: #252532;
+}
+
+
+#page-description.Gemini p{
+    color: #c49139;
+    opacity: 1;
+}
+
+
+.content-section.Gemini .section-heading{
+    font-size: 48px;
+}
+
+.content-section.Gemini .section-sub-heading{
+    font-size:32px;
+}
+
+/* End Gemini */
+/* Cancer */
+.content.Cancer{
+    position:relative;
+    color:#777045;
+    background: url(../img/il_570xN.4801846107_6ug3.jpg.webp) top center/ cover no-repeat;
+}
+.content-section.Cancer{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    margin-top: 48px;
+}
+
+#page-description.Cancer{
+    background-color: #efe4cb;
+}
+
+#page-description.Cancer .page-text-description{
+    color:#9f986f;
+    text-shadow: 0.3px 0.3px #9f986f;
+    opacity: 1;
+}
+
+.content-section.Cancer .section-heading{
+    font-size: 48px;
+}
+
+.content-section.Cancer .section-sub-heading{
+    font-size:32px;
+}
+/* End Cancer */
+/* Leo */
+.content.Leo{
+    position:relative;
+    color:#4e3019;
+    background: url(../img/depositphotos_127565446-stock-illustration-zodiac-sign-leo-linear-drawing.jpg) top center/ cover no-repeat;
+}
+.content-section.Leo{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    margin-top: 18px;
+}
+
+.content-section.Leo h2{
+    font-size: 36px;
+}
+.content-section.Leo p{
+    font-size: 18px;
+}
+#page-description.Leo{
+    background-color: #533523;
+}
+
+#page-description.Leo .page-text-description{
+    color:#fff9eb;
+}
+/* End Leo */
+/* Virgo */
+
+.content.Virgo{
+    position:relative;
+    color:#e5e75a;
+    background: url(../img/ac17b67196344e5a1b4ebea2cdf2522a.jpg) top center/ cover no-repeat;
+}
+.content-section.Virgo{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    margin-top: 32px;
+}
+
+#page-description.Virgo{
+    background-color: #769c99;
+}
+
+#page-description.Virgo .page-text-description{
+    color:#fff;
+}
+
+/* End Virgo */
+/* Libra */
+.content.Libra{
+    background: url(../img/libra-constellation-zodiac-sign-1825-science-source.jpg) top center/ cover no-repeat;
+}
+
+.content-section.Libra{
+    margin-right:32px;
+    margin-bottom: 32px;
+    color:#7b4d20;
+    text-shadow: 1px 1px #a92e22;
+    top:0;
+    right:0;
+    margin-top: 72px;
+    margin-right: 120px;
+}
+
+.content-section.Libra .section-heading{
+    font-size: 48px;
+}
+
+.content-section.Libra .section-sub-heading{
+    font-size: 14px;
+}
+
+#page-description.Libra{
+    background-color:#d5be93;
+}
+
+#page-description.Libra .page-text-description{
+    color:#7b4d20;
+    font-weight: 550;
+}
+/* End Libra */
+/* Scorpio */
+.content.Scorpio{
+    background: url(../img/scorpio-feature.jpg) top center/ cover no-repeat;
+}
+
+.content-section.Scorpio{
+    margin-right: 64px;;
+    margin-bottom: 64px;
+    color:#fff;
+    text-shadow: 0.5px 0.5px #fff;
+    bottom:0;
+    right:0;
+}
+
+.content-section.Scorpio .section-heading{
+    font-size: 32px;
+}
+
+.content-section.Scorpio .section-sub-heading{
+    font-size: 16px;
+}
+
+#page-description.Scorpio{
+    background-color:#0a131c;
+}
+
+#page-description.Scorpio .page-text-description{
+    color:#fff;
+    font-weight: 550;
+}
+
+/* End Scorpio */
+/* Sagittarius */
+.content.Sagittarius{
+    background: url(../img/chart-Sagittarius-bow-arrow-etching-centaur-Uranias-1825.jpg.webp) top center/ cover no-repeat;
+}
+
+.content-section.Sagittarius{
+    margin-top: 64px;;
+    margin-left: 64px;
+    color:#ab6e38;
+    text-shadow: 1px 1px #000;
+    top:0;
+    left:0;
+}
+
+.content-section.Sagittarius .section-heading{
+    font-size: 48px;
+}
+
+.content-section.Sagittarius .section-sub-heading{
+    font-size: 24px;
+}
+
+#page-description.Sagittarius{
+    background-color:#d1be8b;
+    text-shadow: 0.4px 0.4px #000;
+}
+#page-description.Sagittarius p{
+    color: #ab6e38;
+    opacity:1;
+}
+
+/* End Sagittarius */
+/* Capricorn */
+.content.Capricorn{
+    background: url(../img/Capricorn-Uranias-Mirror.jpg) top center/ cover no-repeat;
+}
+
+.content-section.Capricorn{
+    color:#628774;
+    margin-top: 48px;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.content-section.Capricorn .section-heading{
+    font-size: 56px;
+}
+
+.content-section.Capricorn .section-sub-heading{
+    font-size: 24px;
+}
+
+#page-description.Capricorn{
+    background-color: #ecf1e9;
+}
+#page-description.Capricorn p{
+    color: #628774;    
+    opacity: 1;
+    font-weight: 550;
+}
+
+/* End Capricorn */
+/* Aquarius */
+.content.Aquarius{
+    background: url(../img/chart-figure-Aquarius-bowl-water-flows-Sidney-1825.jpg.webp) top center/ cover no-repeat;
+}
+
+.content-section.Aquarius{
+    color:#573c12;
+    margin-top: 48px;
+    top:0;
+    left:0;
+    margin-left:72px;
+}
+
+.content-section.Aquarius .section-heading{
+    font-size: 52px;
+}
+
+.content-section.Aquarius .section-sub-heading{
+    font-size: 22px;
+}
+
+#page-description.Aquarius{
+    background-color: #cfb67f;
+}
+#page-description.Aquarius p{
+    color: #64421a;
+    font-weight: 550;
+    opacity: 1;
+}
+/* End Aquarius */
+/* Pisces */
+.content.Pisces{
+    background: url(../img/chart-constellation-Pisces-etching-fish-Uranias-Mirror-1825.jpg.webp) top center/ cover no-repeat;
+}
+
+.content-section.Pisces{
+    color:#bc362a;
+    margin-top: 48px;
+    top:0;
+    right:0;
+    margin-right:72px;
+}
+
+.content-section.Pisces .section-heading{
+    font-size: 52px;
+}
+
+.content-section.Pisces .section-sub-heading{
+    font-size: 22px;
+}
+
+#page-description.Pisces{
+    background-color: #e1ca9d;
+}
+#page-description.Pisces p{
+    color: #bc362a;
+    font-weight: 550;
+    opacity: 1;
+}
+/* End Pisces */
+/* Contact */
+#contact{
+    height:300px;
+    width:100%;
+    background-color: #fff;
+}
+
+.contact-form{
+    height:100%;
+    padding: 52px 0px;
+}
+
+.contact-body{
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+}
+
+.contact-link{
+    margin-right: 128px;
+    line-height:1.4;
+    transform: translateY(4px);
+}
+
+.contact-link p{
+    /* transform: translateY(6px); */
+    margin-bottom: 4px;
+}
+
+.contact-link i[class*="ti-"] {
+    transform: translateY(2px);
+    font-size: 20px;
+    display: inline-block;
+    margin-right:16px;
+}
+
+.contact-header{
+    text-align: center;
+}   
+
+.contact-header-title{
+    font-weight: 350;
+    margin: 12px 0px;
+    letter-spacing: 4px;
+    font-size: 32px;
+}
+
+.contact-header-description{
+    font-style:italic;
+    opacity: 0.6;
+}
+
+.contact-message{
+    width:400px;
+}
+
+.form-control{
+    padding:13px;
+    border:1px solid #ccc;
+    width: calc(100% - 32px);
+}
+
+
+.form-submit-btn{
+    border:none;
+    color:#fff;
+    background-color: #000;
+    padding:10px 16px;
+    float:right;
+    outline:none;
+    transform: translateX(-8px);
+}
+
