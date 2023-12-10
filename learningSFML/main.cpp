@@ -1,69 +1,33 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-
-using namespace std;
-
-class Enemy
-{
-private:
-public:
-    int damage;
-    int health;
-    void Kill()
-    {
-        cout << "you are killed" << endl;
-    }
-
-    void Heal()
-    {
-        health += 10;
-        cout << "you are Healed" << endl;
-    }
-
-    void Walk()
-    {
-        cout << "you walk" << endl;
-    }
-};
-
 int main()
 {
-    // sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
-    // sf::CircleShape shape(100.f);
-    // shape.setFillColor(sf::Color::Green);
+    sf::ContextSettings settings;
+    settings.antialiasingLevel = 0;
+    sf::RenderWindow window(sf::VideoMode(800, 600), "RPG GAME", sf::Style::Default, settings);
+    sf::Texture playerTexture;
+    sf::Sprite playerSprite;
 
-    // while (window.isOpen())
-    // {
-    //     sf::Event event;
-    //     while (window.pollEvent(event))
-    //     {
-    //         if (event.type == sf::Event::Closed)
-    //             window.close();
-    //     }
-
-    //     window.clear();
-    //     window.draw(shape);
-    //     window.display();
-    // }
-
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
-    sf::CircleShape shape(100.f);
-    sf::RectangleShape recShape(sf::Vector2f(100, 200));
-    shape.setFillColor(sf::Color::Red);
-    shape.setPosition(sf::Vector2f(100, 100));
-    shape.setOutlineThickness(10);
-    shape.setOutlineColor(sf::Color::Green);
-    recShape.setFillColor(sf::Color::Red);
-    recShape.setPosition(sf::Vector2f(400, 400));
-    recShape.setOutlineThickness(10);
-    recShape.setOutlineColor(sf::Color::Green);
-
-    sf::Vector2f origin(recShape.getSize().x / 2, recShape.getSize().y / 2);
-    recShape.setOrigin(origin);
-
-    recShape.setRotation(45);
+    if (playerTexture.loadFromFile("Assets/Player/Texture/spritesheetone.png"))
+    {
+        int XIndex = 0;
+        int YIndex = 0;
+        std::cout << "Player image loaded!" << std::endl;
+        playerSprite.setTexture(playerTexture);
+        playerSprite.setTextureRect(sf::IntRect(XIndex * 64, YIndex * 64, 64, 64));
+        playerSprite.scale(4, 4);
+    }
+    else
+    {
+        std::cout << "Player image failed to loaded!" << std::endl;
+    }
     while (window.isOpen())
     {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+        {
+            std::cout << "pressed W";
+        }
+
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -71,24 +35,54 @@ int main()
             {
                 window.close();
             }
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::W)
+            {
+                sf::Vector2f currentPosition = playerSprite.getPosition();
+                playerSprite.setPosition(currentPosition + sf::Vector2f(0, -25));
+            }
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::A)
+            {
+                sf::Vector2f currentPosition = playerSprite.getPosition();
+                playerSprite.setPosition(currentPosition + sf::Vector2f(-25, 0));
+            }
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::S)
+            {
+                sf::Vector2f currentPosition = playerSprite.getPosition();
+                playerSprite.setPosition(currentPosition + sf::Vector2f(0, 25));
+            }
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::D)
+            {
+                sf::Vector2f currentPosition = playerSprite.getPosition();
+                playerSprite.setPosition(currentPosition + sf::Vector2f(25, 0));
+            }
         }
 
-        window.clear(sf::Color::Yellow);
-        window.draw(shape);
-        window.draw(recShape);
+        // if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+        // {
+        //     std::cout << "pressed W";
+        //     sf::Vector2f currentPosition = playerSprite.getPosition();
+        //     playerSprite.setPosition(currentPosition + sf::Vector2f(0, -10));
+        // }
+        // if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+        // {
+        //     sf::Vector2f currentPosition = playerSprite.getPosition();
+        //     playerSprite.setPosition(currentPosition + sf::Vector2f(-10, 0));
+        // }
+        // if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+        // {
+        //     sf::Vector2f currentPosition = playerSprite.getPosition();
+        //     playerSprite.setPosition(currentPosition + sf::Vector2f(0, 10));
+        // }
+        // if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+        // {
+        //     sf::Vector2f currentPosition = playerSprite.getPosition();
+        //     playerSprite.setPosition(currentPosition + sf::Vector2f(10, 0));
+        // }
+
+        window.clear(sf::Color::Black);
+        window.draw(playerSprite);
         window.display();
     }
-
-    // float speed;
-    // bool isAlive;
-    // int hp;
-    // Enemy goblin;
-    // goblin.health = 100;
-    // goblin.damage = 50;
-    // goblin.Walk();
-
-    // // cout << goblin.health << endl;
-    // cout << "hello";
 
     return 0;
 }

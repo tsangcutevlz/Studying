@@ -3,12 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**",
-                "/Users/tsangcuteso1/Downloads/sourceSFML/include",
-                "/Users/tsangcuteso1/Downloads/SFML-2.6.0-macos-clang-64-bit/include",
-                "/opt/homebrew/Cellar/sfml/2.6.0/include",
-                "/opt/homebrew/Cellar/sfml/2.6.0/lib/cmake/SFML",
-                "/opt/homebrew/Cellar/sfml/2.6.0/share/doc/SFML"
+                // "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/sfml/2.6.1/include/SFML"
             ],
             "defines": [],
             "macFrameworkPath": [],
