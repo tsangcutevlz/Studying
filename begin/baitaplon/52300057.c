@@ -94,6 +94,7 @@ int main()
                 {
                     break;
                 }
+                
                 ld -= 2;
             }
             else

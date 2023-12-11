@@ -19,6 +19,9 @@ message(STATUS "SFML_INCLUDE_DIR: ${SFML_INCLUDE_DIR}")
 
 set(CMAKE_OSX_ARCHITECTURES "arm64")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-c++11-extensions")
+
 
 # In ra các thư viện được liên kết để kiểm tra
 message(STATUS "SFML_LIBRARIES: ${SFML_LIBRARIES}")
