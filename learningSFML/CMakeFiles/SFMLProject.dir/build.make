@@ -69,10 +69,52 @@ include CMakeFiles/SFMLProject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SFMLProject.dir/flags.make
 
+CMakeFiles/SFMLProject.dir/math.cpp.o: CMakeFiles/SFMLProject.dir/flags.make
+CMakeFiles/SFMLProject.dir/math.cpp.o: math.cpp
+CMakeFiles/SFMLProject.dir/math.cpp.o: CMakeFiles/SFMLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SFMLProject.dir/math.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SFMLProject.dir/math.cpp.o -MF CMakeFiles/SFMLProject.dir/math.cpp.o.d -o CMakeFiles/SFMLProject.dir/math.cpp.o -c /Users/tsangcuteso1/Beginning/learningSFML/math.cpp
+
+CMakeFiles/SFMLProject.dir/math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SFMLProject.dir/math.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tsangcuteso1/Beginning/learningSFML/math.cpp > CMakeFiles/SFMLProject.dir/math.cpp.i
+
+CMakeFiles/SFMLProject.dir/math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SFMLProject.dir/math.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tsangcuteso1/Beginning/learningSFML/math.cpp -o CMakeFiles/SFMLProject.dir/math.cpp.s
+
+CMakeFiles/SFMLProject.dir/player.cpp.o: CMakeFiles/SFMLProject.dir/flags.make
+CMakeFiles/SFMLProject.dir/player.cpp.o: player.cpp
+CMakeFiles/SFMLProject.dir/player.cpp.o: CMakeFiles/SFMLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SFMLProject.dir/player.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SFMLProject.dir/player.cpp.o -MF CMakeFiles/SFMLProject.dir/player.cpp.o.d -o CMakeFiles/SFMLProject.dir/player.cpp.o -c /Users/tsangcuteso1/Beginning/learningSFML/player.cpp
+
+CMakeFiles/SFMLProject.dir/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SFMLProject.dir/player.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tsangcuteso1/Beginning/learningSFML/player.cpp > CMakeFiles/SFMLProject.dir/player.cpp.i
+
+CMakeFiles/SFMLProject.dir/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SFMLProject.dir/player.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tsangcuteso1/Beginning/learningSFML/player.cpp -o CMakeFiles/SFMLProject.dir/player.cpp.s
+
+CMakeFiles/SFMLProject.dir/skeleton.cpp.o: CMakeFiles/SFMLProject.dir/flags.make
+CMakeFiles/SFMLProject.dir/skeleton.cpp.o: skeleton.cpp
+CMakeFiles/SFMLProject.dir/skeleton.cpp.o: CMakeFiles/SFMLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SFMLProject.dir/skeleton.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SFMLProject.dir/skeleton.cpp.o -MF CMakeFiles/SFMLProject.dir/skeleton.cpp.o.d -o CMakeFiles/SFMLProject.dir/skeleton.cpp.o -c /Users/tsangcuteso1/Beginning/learningSFML/skeleton.cpp
+
+CMakeFiles/SFMLProject.dir/skeleton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SFMLProject.dir/skeleton.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tsangcuteso1/Beginning/learningSFML/skeleton.cpp > CMakeFiles/SFMLProject.dir/skeleton.cpp.i
+
+CMakeFiles/SFMLProject.dir/skeleton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SFMLProject.dir/skeleton.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tsangcuteso1/Beginning/learningSFML/skeleton.cpp -o CMakeFiles/SFMLProject.dir/skeleton.cpp.s
+
 CMakeFiles/SFMLProject.dir/main.cpp.o: CMakeFiles/SFMLProject.dir/flags.make
 CMakeFiles/SFMLProject.dir/main.cpp.o: main.cpp
 CMakeFiles/SFMLProject.dir/main.cpp.o: CMakeFiles/SFMLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SFMLProject.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SFMLProject.dir/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SFMLProject.dir/main.cpp.o -MF CMakeFiles/SFMLProject.dir/main.cpp.o.d -o CMakeFiles/SFMLProject.dir/main.cpp.o -c /Users/tsangcuteso1/Beginning/learningSFML/main.cpp
 
 CMakeFiles/SFMLProject.dir/main.cpp.i: cmake_force
@@ -85,11 +127,17 @@ CMakeFiles/SFMLProject.dir/main.cpp.s: cmake_force
 
 # Object files for target SFMLProject
 SFMLProject_OBJECTS = \
+"CMakeFiles/SFMLProject.dir/math.cpp.o" \
+"CMakeFiles/SFMLProject.dir/player.cpp.o" \
+"CMakeFiles/SFMLProject.dir/skeleton.cpp.o" \
 "CMakeFiles/SFMLProject.dir/main.cpp.o"
 
 # External object files for target SFMLProject
 SFMLProject_EXTERNAL_OBJECTS =
 
+SFMLProject: CMakeFiles/SFMLProject.dir/math.cpp.o
+SFMLProject: CMakeFiles/SFMLProject.dir/player.cpp.o
+SFMLProject: CMakeFiles/SFMLProject.dir/skeleton.cpp.o
 SFMLProject: CMakeFiles/SFMLProject.dir/main.cpp.o
 SFMLProject: CMakeFiles/SFMLProject.dir/build.make
 SFMLProject: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
@@ -97,7 +145,7 @@ SFMLProject: /opt/homebrew/lib/libsfml-audio.2.6.1.dylib
 SFMLProject: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
 SFMLProject: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 SFMLProject: CMakeFiles/SFMLProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SFMLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable SFMLProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SFMLProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

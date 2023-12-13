@@ -153,6 +153,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+math.o: math.cpp.o
+.PHONY : math.o
+
+# target to build an object file
+math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/math.cpp.o
+.PHONY : math.cpp.o
+
+math.i: math.cpp.i
+.PHONY : math.i
+
+# target to preprocess a source file
+math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/math.cpp.i
+.PHONY : math.cpp.i
+
+math.s: math.cpp.s
+.PHONY : math.s
+
+# target to generate assembly for a file
+math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/math.cpp.s
+.PHONY : math.cpp.s
+
+player.o: player.cpp.o
+.PHONY : player.o
+
+# target to build an object file
+player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/player.cpp.o
+.PHONY : player.cpp.o
+
+player.i: player.cpp.i
+.PHONY : player.i
+
+# target to preprocess a source file
+player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/player.cpp.i
+.PHONY : player.cpp.i
+
+player.s: player.cpp.s
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/player.cpp.s
+.PHONY : player.cpp.s
+
+skeleton.o: skeleton.cpp.o
+.PHONY : skeleton.o
+
+# target to build an object file
+skeleton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/skeleton.cpp.o
+.PHONY : skeleton.cpp.o
+
+skeleton.i: skeleton.cpp.i
+.PHONY : skeleton.i
+
+# target to preprocess a source file
+skeleton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/skeleton.cpp.i
+.PHONY : skeleton.cpp.i
+
+skeleton.s: skeleton.cpp.s
+.PHONY : skeleton.s
+
+# target to generate assembly for a file
+skeleton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/skeleton.cpp.s
+.PHONY : skeleton.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +237,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... math.o"
+	@echo "... math.i"
+	@echo "... math.s"
+	@echo "... player.o"
+	@echo "... player.i"
+	@echo "... player.s"
+	@echo "... skeleton.o"
+	@echo "... skeleton.i"
+	@echo "... skeleton.s"
 .PHONY : help
 
 

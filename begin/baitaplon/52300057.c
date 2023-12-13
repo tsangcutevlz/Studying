@@ -34,7 +34,6 @@ int checkFriendNum(int a, int b)
         return 1;
     return 0;
 }
-
 int main()
 {
     FILE *inputFile, *outputFile;
@@ -46,22 +45,29 @@ int main()
         perror("Loi khi mo tap tin: ");
         return 0;
     }
-    fscanf(inputFile, "%d %d %d %d", &n, &dc, &dg, &ld);
-
-    fgets(w, sizeof(w), inputFile);
+    fscanf(inputFile, "%d %d %d %d %s", &n, &dc, &dg, &ld, &w);
     fclose(inputFile);
     if ((outputFile = fopen("/Users/tsangcuteso1/Beginning/begin/baitaplon/output.out", "w")) == NULL)
     {
         printf("Khong the mo tap tin output.out\n");
         return 0;
     }
+
+    if (n == 0)
+    {
+        fprintf(outputFile, "0 0 0");
+        fclose(outputFile);
+        return 0;
+    }
+
     if (
+        (dg == 0 && dc == 0) ||
         n > 2000 ||
         n <= 0 ||
         dc < 0 ||
         dg < 0 ||
         (ld <= 1 || ld >= 600) ||
-        (strstr(w, "Wind") == NULL && strstr(w, "Rain") == NULL && strstr(w, "Sun") == NULL && strstr(w, "Cloud") == NULL && strstr(w, "Fog") == NULL))
+        (strcmp(w, "Wind") != 0 && strcmp(w, "Rain") != 0 && strcmp(w, "Sun") != 0 && strcmp(w, "Cloud") != 0 && strcmp(w, "Fog") != 0))
     {
         fprintf(outputFile, "-1 -1 %d", n);
         fclose(outputFile);
@@ -94,7 +100,7 @@ int main()
                 {
                     break;
                 }
-                
+
                 ld -= 2;
             }
             else
@@ -176,8 +182,6 @@ int main()
                         amountBC = saveAmountBC;
                         saveAmountBG = amountBG;
                     }
-                    // storeSave = saveOfSave;
-                    // storeLD = saveLD;
                     saveAmountBC = 0;
                 }
                 else
@@ -443,7 +447,7 @@ int main()
         {
             strcpy(weather, "Wind");
         }
-        else
+        if (weatherSub == 2)
         {
             strcpy(weather, "Cloud");
         }
@@ -486,7 +490,8 @@ int main()
                             amountBC++;
                         }
                         ld -= 2;
-                        if( ld == 1 && save > areaBC){
+                        if (ld == 1 && save > areaBC)
+                        {
                             break;
                         }
                     }
@@ -645,7 +650,8 @@ int main()
                             amountBG++;
                         }
                         ld -= 2;
-                        if(ld == 1 && save > areaBG){
+                        if (ld == 1 && save > areaBG)
+                        {
                             break;
                         }
                     }
