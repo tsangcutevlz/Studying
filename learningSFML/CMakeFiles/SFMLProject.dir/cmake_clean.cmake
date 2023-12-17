@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SFMLProject.dir/bullet.cpp.o"
+  "CMakeFiles/SFMLProject.dir/bullet.cpp.o.d"
+  "CMakeFiles/SFMLProject.dir/frameRate.cpp.o"
+  "CMakeFiles/SFMLProject.dir/frameRate.cpp.o.d"
   "CMakeFiles/SFMLProject.dir/main.cpp.o"
   "CMakeFiles/SFMLProject.dir/main.cpp.o.d"
   "CMakeFiles/SFMLProject.dir/math.cpp.o"

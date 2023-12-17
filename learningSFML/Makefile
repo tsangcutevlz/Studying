@@ -129,6 +129,54 @@ SFMLProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/build
 .PHONY : SFMLProject/fast
 
+bullet.o: bullet.cpp.o
+.PHONY : bullet.o
+
+# target to build an object file
+bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/bullet.cpp.o
+.PHONY : bullet.cpp.o
+
+bullet.i: bullet.cpp.i
+.PHONY : bullet.i
+
+# target to preprocess a source file
+bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/bullet.cpp.i
+.PHONY : bullet.cpp.i
+
+bullet.s: bullet.cpp.s
+.PHONY : bullet.s
+
+# target to generate assembly for a file
+bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/bullet.cpp.s
+.PHONY : bullet.cpp.s
+
+frameRate.o: frameRate.cpp.o
+.PHONY : frameRate.o
+
+# target to build an object file
+frameRate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/frameRate.cpp.o
+.PHONY : frameRate.cpp.o
+
+frameRate.i: frameRate.cpp.i
+.PHONY : frameRate.i
+
+# target to preprocess a source file
+frameRate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/frameRate.cpp.i
+.PHONY : frameRate.cpp.i
+
+frameRate.s: frameRate.cpp.s
+.PHONY : frameRate.s
+
+# target to generate assembly for a file
+frameRate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/frameRate.cpp.s
+.PHONY : frameRate.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -234,6 +282,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SFMLProject"
+	@echo "... bullet.o"
+	@echo "... bullet.i"
+	@echo "... bullet.s"
+	@echo "... frameRate.o"
+	@echo "... frameRate.i"
+	@echo "... frameRate.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

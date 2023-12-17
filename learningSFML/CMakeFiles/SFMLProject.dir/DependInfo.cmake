@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/tsangcuteso1/Beginning/learningSFML/bullet.cpp" "CMakeFiles/SFMLProject.dir/bullet.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/bullet.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/frameRate.cpp" "CMakeFiles/SFMLProject.dir/frameRate.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/frameRate.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/main.cpp" "CMakeFiles/SFMLProject.dir/main.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/main.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/math.cpp" "CMakeFiles/SFMLProject.dir/math.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/math.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/player.cpp" "CMakeFiles/SFMLProject.dir/player.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/player.cpp.o.d"

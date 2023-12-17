@@ -2,6 +2,14 @@
 #include "./characters/player.h"
 #include "./characters/math.h"
 
+Player::Player() :
+    playerSpeed(1.0f), maxFireRate(100), fireRateTimer(0)
+{
+}
+Player::~Player()
+{
+}
+
 void Player::Initialize()
 {
     boundingRectangle.setFillColor(sf::Color::Transparent);
@@ -46,37 +54,45 @@ void Player::Update(float deltaTime, sf::Event event)
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::S)
     {
         sprite.setPosition(currentPosition + sf::Vector2f(0, 25) * playerSpeed * deltaTime);
-    }   
+    }
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::D)
     {
         sprite.setPosition(currentPosition + sf::Vector2f(25, 0) * playerSpeed * deltaTime);
     }
 }
 
-void Player::Shoot(float deltaTime, Skeleton &skeleton)
+void Player::Shoot(float deltaTime, Skeleton &skeleton, sf::Vector2f mousePosition)
 {
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+    fireRateTimer += deltaTime;
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && fireRateTimer >= maxFireRate)
     {
-        sf::RectangleShape newBullet(sf::Vector2f(50, 25));
-        bullets.push_back(newBullet);
+        bullets.push_back(Bullet());
         int i = bullets.size() - 1;
-        bullets[i].setPosition(sprite.getPosition());
+        bullets[i].Initialize(sprite.getPosition(), mousePosition, 0.5f);
+
+        // bullets[i].setPosition(sprite.getPosition());
+        fireRateTimer = 0;
     }
 
     for (int i = 0; i < bullets.size(); i++)
     {
-        sf::Vector2f bulletDirection;
-        bulletDirection = skeleton.sprite.getPosition() - bullets[i].getPosition();
-        bulletDirection = Math::NormalizeVector(bulletDirection);
-        bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed * deltaTime);
+        // sf::Vector2f bulletDirection;
+        // bulletDirection = mousePosition - bullets[i].getPosition();
+        // bulletDirection = Math::NormalizeVector(bulletDirection);
+        // bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed * deltaTime);
+
+        bullets[i].Update(deltaTime);
+        if (skeleton.health > 0)
+        {
+            if (Math::DidRectCollide(bullets[i].GetGlobalBounds(), skeleton.sprite.getGlobalBounds()))
+            {
+                skeleton.ChangeHealth(-10);
+                bullets.erase(bullets.begin() + i);
+            }
+        }
     }
 
     boundingRectangle.setPosition(sprite.getPosition());
-
-    if (Math::DidRectCollide(sprite.getGlobalBounds(), skeleton.sprite.getGlobalBounds()))
-    {
-        std::cout << "there's collision\n";
-    }
 }
 
 void Player::Draw(sf::RenderWindow &window)
@@ -84,7 +100,7 @@ void Player::Draw(sf::RenderWindow &window)
     window.draw(sprite);
     for (int i = 0; i < bullets.size(); i++)
     {
-        window.draw(bullets[i]);
+        bullets[i].Draw(window);
     }
     window.draw(boundingRectangle);
 }

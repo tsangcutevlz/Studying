@@ -6,31 +6,41 @@
 #include "./characters/player.h"
 #include "./characters/skeleton.h"
 #include "./characters/math.h"
-
+#include "./characters/frameRate.h"
 int main()
 {
 
     // --------------------------------- INITIALIZE ------------------------------------
     sf::ContextSettings settings;
     settings.antialiasingLevel = 0;
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "RPG GAME", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode(1500, 1080), "RPG GAME", sf::Style::Default, settings);
     window.setFramerateLimit(240);
     // --------------------------------- INITIALIZE ------------------------------------
+    sf::Text frameRateText; // Sprite
+    sf::Font font; // Textures
+    
+    FrameRate frameRate;
     Skeleton skeleton;
     Player player;
-    // --------------------------------- INITIALIZE & LOAD PLAYER, SKELETON ------------------------------------
-
+    // --------------------------------- INITIALIZE ------------------------------------
+    frameRate.Initialize();
     player.Initialize();
     skeleton.Initialize();
+    // --------------------------------- INITIALIZE  ------------------------------------
+    // --------------------------------- LOAD  ------------------------------------
+    frameRate.Load();
     player.Load();
     skeleton.Load();
 
-    // --------------------------------- INITIALIZE & LOAD PLAYER, SKELETON ------------------------------------
+    // --------------------------------- LOAD  ------------------------------------
     sf::Clock clock;
+    sf::Time deltaTimeTimer;
+    double deltaTime = 0;
     while (window.isOpen())
     {
-        sf::Time deltaTimeTimer = clock.restart();
-        float deltaTime = deltaTimeTimer.asMilliseconds();
+        clock.restart();
+
+        frameRate.Update(deltaTime);
         // ------------------------------ Update ----------------------------------
 
         sf::Event event;
@@ -44,7 +54,10 @@ int main()
             skeleton.Update(deltaTime, event);
         }
 
-        player.Shoot(deltaTime, skeleton);
+        sf::Vector2f mousePosition = sf::Vector2f(sf::Mouse::getPosition(window));
+
+        player.Shoot(deltaTime, skeleton, mousePosition);
+
         // if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
         // {
         //     sf::Vector2f currentPosition = playerSprite.getPosition();
@@ -74,10 +87,12 @@ int main()
         window.clear(sf::Color::Black);
         player.Draw(window);
         skeleton.Draw(window);
-
+        frameRate.Draw(window);
         window.display();
-
         // ------------------------------ Draw ----------------------------------
+    
+        deltaTimeTimer = clock.getElapsedTime();
+        deltaTime = deltaTimeTimer.asMicroseconds() / 1000.0f;
     }
 
     return 0;

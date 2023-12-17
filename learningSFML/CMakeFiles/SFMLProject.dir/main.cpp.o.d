@@ -812,4 +812,6 @@ CMakeFiles/SFMLProject.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
   /Users/tsangcuteso1/Beginning/learningSFML/./characters/player.h \
   /Users/tsangcuteso1/Beginning/learningSFML/./characters/skeleton.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/math.h
+  /Users/tsangcuteso1/Beginning/learningSFML/./characters/bullet.h \
+  /Users/tsangcuteso1/Beginning/learningSFML/./characters/math.h \
+  /Users/tsangcuteso1/Beginning/learningSFML/./characters/frameRate.h

@@ -125,12 +125,42 @@ CMakeFiles/SFMLProject.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SFMLProject.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tsangcuteso1/Beginning/learningSFML/main.cpp -o CMakeFiles/SFMLProject.dir/main.cpp.s
 
+CMakeFiles/SFMLProject.dir/frameRate.cpp.o: CMakeFiles/SFMLProject.dir/flags.make
+CMakeFiles/SFMLProject.dir/frameRate.cpp.o: frameRate.cpp
+CMakeFiles/SFMLProject.dir/frameRate.cpp.o: CMakeFiles/SFMLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SFMLProject.dir/frameRate.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SFMLProject.dir/frameRate.cpp.o -MF CMakeFiles/SFMLProject.dir/frameRate.cpp.o.d -o CMakeFiles/SFMLProject.dir/frameRate.cpp.o -c /Users/tsangcuteso1/Beginning/learningSFML/frameRate.cpp
+
+CMakeFiles/SFMLProject.dir/frameRate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SFMLProject.dir/frameRate.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tsangcuteso1/Beginning/learningSFML/frameRate.cpp > CMakeFiles/SFMLProject.dir/frameRate.cpp.i
+
+CMakeFiles/SFMLProject.dir/frameRate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SFMLProject.dir/frameRate.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tsangcuteso1/Beginning/learningSFML/frameRate.cpp -o CMakeFiles/SFMLProject.dir/frameRate.cpp.s
+
+CMakeFiles/SFMLProject.dir/bullet.cpp.o: CMakeFiles/SFMLProject.dir/flags.make
+CMakeFiles/SFMLProject.dir/bullet.cpp.o: bullet.cpp
+CMakeFiles/SFMLProject.dir/bullet.cpp.o: CMakeFiles/SFMLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SFMLProject.dir/bullet.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SFMLProject.dir/bullet.cpp.o -MF CMakeFiles/SFMLProject.dir/bullet.cpp.o.d -o CMakeFiles/SFMLProject.dir/bullet.cpp.o -c /Users/tsangcuteso1/Beginning/learningSFML/bullet.cpp
+
+CMakeFiles/SFMLProject.dir/bullet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SFMLProject.dir/bullet.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tsangcuteso1/Beginning/learningSFML/bullet.cpp > CMakeFiles/SFMLProject.dir/bullet.cpp.i
+
+CMakeFiles/SFMLProject.dir/bullet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SFMLProject.dir/bullet.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tsangcuteso1/Beginning/learningSFML/bullet.cpp -o CMakeFiles/SFMLProject.dir/bullet.cpp.s
+
 # Object files for target SFMLProject
 SFMLProject_OBJECTS = \
 "CMakeFiles/SFMLProject.dir/math.cpp.o" \
 "CMakeFiles/SFMLProject.dir/player.cpp.o" \
 "CMakeFiles/SFMLProject.dir/skeleton.cpp.o" \
-"CMakeFiles/SFMLProject.dir/main.cpp.o"
+"CMakeFiles/SFMLProject.dir/main.cpp.o" \
+"CMakeFiles/SFMLProject.dir/frameRate.cpp.o" \
+"CMakeFiles/SFMLProject.dir/bullet.cpp.o"
 
 # External object files for target SFMLProject
 SFMLProject_EXTERNAL_OBJECTS =
@@ -139,13 +169,15 @@ SFMLProject: CMakeFiles/SFMLProject.dir/math.cpp.o
 SFMLProject: CMakeFiles/SFMLProject.dir/player.cpp.o
 SFMLProject: CMakeFiles/SFMLProject.dir/skeleton.cpp.o
 SFMLProject: CMakeFiles/SFMLProject.dir/main.cpp.o
+SFMLProject: CMakeFiles/SFMLProject.dir/frameRate.cpp.o
+SFMLProject: CMakeFiles/SFMLProject.dir/bullet.cpp.o
 SFMLProject: CMakeFiles/SFMLProject.dir/build.make
 SFMLProject: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
 SFMLProject: /opt/homebrew/lib/libsfml-audio.2.6.1.dylib
 SFMLProject: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
 SFMLProject: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 SFMLProject: CMakeFiles/SFMLProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable SFMLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tsangcuteso1/Beginning/learningSFML/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SFMLProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SFMLProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

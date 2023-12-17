@@ -9,7 +9,7 @@ include_directories("/opt/homebrew/Cellar/sfml/2.6.1/include")
 find_package(SFML 2.6.1 COMPONENTS graphics audio REQUIRED)
 
 # Thêm thư viện SFML vào dự án
-add_executable(${PROJECT_NAME} math.cpp player.cpp skeleton.cpp main.cpp )
+add_executable(${PROJECT_NAME} math.cpp player.cpp skeleton.cpp main.cpp frameRate.cpp bullet.cpp)
 
 # Liên kết các thư viện SFML
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-audio)
