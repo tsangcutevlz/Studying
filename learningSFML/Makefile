@@ -129,149 +129,173 @@ SFMLProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/build
 .PHONY : SFMLProject/fast
 
-bullet.o: bullet.cpp.o
-.PHONY : bullet.o
+src/bullet.o: src/bullet.cpp.o
+.PHONY : src/bullet.o
 
 # target to build an object file
-bullet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/bullet.cpp.o
-.PHONY : bullet.cpp.o
+src/bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/bullet.cpp.o
+.PHONY : src/bullet.cpp.o
 
-bullet.i: bullet.cpp.i
-.PHONY : bullet.i
+src/bullet.i: src/bullet.cpp.i
+.PHONY : src/bullet.i
 
 # target to preprocess a source file
-bullet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/bullet.cpp.i
-.PHONY : bullet.cpp.i
+src/bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/bullet.cpp.i
+.PHONY : src/bullet.cpp.i
 
-bullet.s: bullet.cpp.s
-.PHONY : bullet.s
+src/bullet.s: src/bullet.cpp.s
+.PHONY : src/bullet.s
 
 # target to generate assembly for a file
-bullet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/bullet.cpp.s
-.PHONY : bullet.cpp.s
+src/bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/bullet.cpp.s
+.PHONY : src/bullet.cpp.s
 
-frameRate.o: frameRate.cpp.o
-.PHONY : frameRate.o
+src/frameRate.o: src/frameRate.cpp.o
+.PHONY : src/frameRate.o
 
 # target to build an object file
-frameRate.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/frameRate.cpp.o
-.PHONY : frameRate.cpp.o
+src/frameRate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/frameRate.cpp.o
+.PHONY : src/frameRate.cpp.o
 
-frameRate.i: frameRate.cpp.i
-.PHONY : frameRate.i
+src/frameRate.i: src/frameRate.cpp.i
+.PHONY : src/frameRate.i
 
 # target to preprocess a source file
-frameRate.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/frameRate.cpp.i
-.PHONY : frameRate.cpp.i
+src/frameRate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/frameRate.cpp.i
+.PHONY : src/frameRate.cpp.i
 
-frameRate.s: frameRate.cpp.s
-.PHONY : frameRate.s
+src/frameRate.s: src/frameRate.cpp.s
+.PHONY : src/frameRate.s
 
 # target to generate assembly for a file
-frameRate.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/frameRate.cpp.s
-.PHONY : frameRate.cpp.s
+src/frameRate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/frameRate.cpp.s
+.PHONY : src/frameRate.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-math.o: math.cpp.o
-.PHONY : math.o
+src/map.o: src/map.cpp.o
+.PHONY : src/map.o
 
 # target to build an object file
-math.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/math.cpp.o
-.PHONY : math.cpp.o
+src/map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/map.cpp.o
+.PHONY : src/map.cpp.o
 
-math.i: math.cpp.i
-.PHONY : math.i
+src/map.i: src/map.cpp.i
+.PHONY : src/map.i
 
 # target to preprocess a source file
-math.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/math.cpp.i
-.PHONY : math.cpp.i
+src/map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/map.cpp.i
+.PHONY : src/map.cpp.i
 
-math.s: math.cpp.s
-.PHONY : math.s
+src/map.s: src/map.cpp.s
+.PHONY : src/map.s
 
 # target to generate assembly for a file
-math.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/math.cpp.s
-.PHONY : math.cpp.s
+src/map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/map.cpp.s
+.PHONY : src/map.cpp.s
 
-player.o: player.cpp.o
-.PHONY : player.o
+src/math.o: src/math.cpp.o
+.PHONY : src/math.o
 
 # target to build an object file
-player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/player.cpp.o
-.PHONY : player.cpp.o
+src/math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/math.cpp.o
+.PHONY : src/math.cpp.o
 
-player.i: player.cpp.i
-.PHONY : player.i
+src/math.i: src/math.cpp.i
+.PHONY : src/math.i
 
 # target to preprocess a source file
-player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/player.cpp.i
-.PHONY : player.cpp.i
+src/math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/math.cpp.i
+.PHONY : src/math.cpp.i
 
-player.s: player.cpp.s
-.PHONY : player.s
+src/math.s: src/math.cpp.s
+.PHONY : src/math.s
 
 # target to generate assembly for a file
-player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/player.cpp.s
-.PHONY : player.cpp.s
+src/math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/math.cpp.s
+.PHONY : src/math.cpp.s
 
-skeleton.o: skeleton.cpp.o
-.PHONY : skeleton.o
+src/player.o: src/player.cpp.o
+.PHONY : src/player.o
 
 # target to build an object file
-skeleton.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/skeleton.cpp.o
-.PHONY : skeleton.cpp.o
+src/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/player.cpp.o
+.PHONY : src/player.cpp.o
 
-skeleton.i: skeleton.cpp.i
-.PHONY : skeleton.i
+src/player.i: src/player.cpp.i
+.PHONY : src/player.i
 
 # target to preprocess a source file
-skeleton.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/skeleton.cpp.i
-.PHONY : skeleton.cpp.i
+src/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/player.cpp.i
+.PHONY : src/player.cpp.i
 
-skeleton.s: skeleton.cpp.s
-.PHONY : skeleton.s
+src/player.s: src/player.cpp.s
+.PHONY : src/player.s
 
 # target to generate assembly for a file
-skeleton.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/skeleton.cpp.s
-.PHONY : skeleton.cpp.s
+src/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/player.cpp.s
+.PHONY : src/player.cpp.s
+
+src/skeleton.o: src/skeleton.cpp.o
+.PHONY : src/skeleton.o
+
+# target to build an object file
+src/skeleton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/skeleton.cpp.o
+.PHONY : src/skeleton.cpp.o
+
+src/skeleton.i: src/skeleton.cpp.i
+.PHONY : src/skeleton.i
+
+# target to preprocess a source file
+src/skeleton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/skeleton.cpp.i
+.PHONY : src/skeleton.cpp.i
+
+src/skeleton.s: src/skeleton.cpp.s
+.PHONY : src/skeleton.s
+
+# target to generate assembly for a file
+src/skeleton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/skeleton.cpp.s
+.PHONY : src/skeleton.cpp.s
 
 # Help Target
 help:
@@ -282,24 +306,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SFMLProject"
-	@echo "... bullet.o"
-	@echo "... bullet.i"
-	@echo "... bullet.s"
-	@echo "... frameRate.o"
-	@echo "... frameRate.i"
-	@echo "... frameRate.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... math.o"
-	@echo "... math.i"
-	@echo "... math.s"
-	@echo "... player.o"
-	@echo "... player.i"
-	@echo "... player.s"
-	@echo "... skeleton.o"
-	@echo "... skeleton.i"
-	@echo "... skeleton.s"
+	@echo "... src/bullet.o"
+	@echo "... src/bullet.i"
+	@echo "... src/bullet.s"
+	@echo "... src/frameRate.o"
+	@echo "... src/frameRate.i"
+	@echo "... src/frameRate.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/map.o"
+	@echo "... src/map.i"
+	@echo "... src/map.s"
+	@echo "... src/math.o"
+	@echo "... src/math.i"
+	@echo "... src/math.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
+	@echo "... src/skeleton.o"
+	@echo "... src/skeleton.i"
+	@echo "... src/skeleton.s"
 .PHONY : help
 
 

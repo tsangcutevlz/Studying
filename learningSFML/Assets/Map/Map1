@@ -1,0 +1,8 @@
+[Map]
+tilesheet=“Users/tsangcuteso1/Beginning/learningSFML/Assets/World/Prison/tilesheet.png”
+name=Level 1
+tile-width=16
+tile-height=16
+scale-x=4
+scale-y=4
+data=1, 1, 1, 25, 27, 30

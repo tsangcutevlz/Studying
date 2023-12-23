@@ -8,12 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/tsangcuteso1/Beginning/learningSFML/bullet.cpp" "CMakeFiles/SFMLProject.dir/bullet.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/bullet.cpp.o.d"
-  "/Users/tsangcuteso1/Beginning/learningSFML/frameRate.cpp" "CMakeFiles/SFMLProject.dir/frameRate.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/frameRate.cpp.o.d"
-  "/Users/tsangcuteso1/Beginning/learningSFML/main.cpp" "CMakeFiles/SFMLProject.dir/main.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/main.cpp.o.d"
-  "/Users/tsangcuteso1/Beginning/learningSFML/math.cpp" "CMakeFiles/SFMLProject.dir/math.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/math.cpp.o.d"
-  "/Users/tsangcuteso1/Beginning/learningSFML/player.cpp" "CMakeFiles/SFMLProject.dir/player.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/player.cpp.o.d"
-  "/Users/tsangcuteso1/Beginning/learningSFML/skeleton.cpp" "CMakeFiles/SFMLProject.dir/skeleton.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/skeleton.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/bullet.cpp" "CMakeFiles/SFMLProject.dir/src/bullet.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/bullet.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/frameRate.cpp" "CMakeFiles/SFMLProject.dir/src/frameRate.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/frameRate.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/main.cpp" "CMakeFiles/SFMLProject.dir/src/main.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/main.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/map.cpp" "CMakeFiles/SFMLProject.dir/src/map.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/map.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/math.cpp" "CMakeFiles/SFMLProject.dir/src/math.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/math.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/player.cpp" "CMakeFiles/SFMLProject.dir/src/player.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/player.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/skeleton.cpp" "CMakeFiles/SFMLProject.dir/src/skeleton.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/skeleton.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

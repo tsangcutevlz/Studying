@@ -1,5 +1,6 @@
-CMakeFiles/SFMLProject.dir/main.cpp.o: \
-  /Users/tsangcuteso1/Beginning/learningSFML/main.cpp \
+CMakeFiles/SFMLProject.dir/src/frameRate.cpp.o: \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/frameRate.cpp \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/frameRate.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
@@ -809,11 +810,4 @@ CMakeFiles/SFMLProject.dir/main.cpp.o: \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/player.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/skeleton.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/bullet.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/math.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/map.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/tile.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/./characters/frameRate.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream

@@ -6,9 +6,21 @@
 #include "./characters/player.h"
 #include "./characters/skeleton.h"
 #include "./characters/math.h"
+#include "./characters/map.h"
 #include "./characters/frameRate.h"
 int main()
 {
+
+
+
+
+
+
+
+
+
+
+
 
     // --------------------------------- INITIALIZE ------------------------------------
     sf::ContextSettings settings;
@@ -19,19 +31,21 @@ int main()
     sf::Text frameRateText; // Sprite
     sf::Font font; // Textures
     
+    Map map;
     FrameRate frameRate;
     Skeleton skeleton;
     Player player;
     // --------------------------------- INITIALIZE ------------------------------------
+    map.Initialize();
     frameRate.Initialize();
     player.Initialize();
     skeleton.Initialize();
     // --------------------------------- INITIALIZE  ------------------------------------
     // --------------------------------- LOAD  ------------------------------------
+    map.Load();
     frameRate.Load();
     player.Load();
     skeleton.Load();
-
     // --------------------------------- LOAD  ------------------------------------
     sf::Clock clock;
     sf::Time deltaTimeTimer;
@@ -84,7 +98,8 @@ int main()
 
         // ------------------------------ Draw ----------------------------------
 
-        window.clear(sf::Color::Black);
+        window.clear(sf::Color::Red);
+        map.Draw(window);
         player.Draw(window);
         skeleton.Draw(window);
         frameRate.Draw(window);
