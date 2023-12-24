@@ -8,6 +8,8 @@
 #include "./characters/math.h"
 #include "./characters/map.h"
 #include "./characters/frameRate.h"
+#include "./characters/mapLoader.h"
+
 int main()
 {
 
@@ -35,6 +37,8 @@ int main()
     FrameRate frameRate;
     Skeleton skeleton;
     Player player;
+    MapLoader mapLoader;
+    mapLoader.Load("./Assets/Map/Map1.txt");
     // --------------------------------- INITIALIZE ------------------------------------
     map.Initialize();
     frameRate.Initialize();

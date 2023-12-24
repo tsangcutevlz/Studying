@@ -225,6 +225,30 @@ src/map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/map.cpp.s
 .PHONY : src/map.cpp.s
 
+src/mapLoader.o: src/mapLoader.cpp.o
+.PHONY : src/mapLoader.o
+
+# target to build an object file
+src/mapLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o
+.PHONY : src/mapLoader.cpp.o
+
+src/mapLoader.i: src/mapLoader.cpp.i
+.PHONY : src/mapLoader.i
+
+# target to preprocess a source file
+src/mapLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.i
+.PHONY : src/mapLoader.cpp.i
+
+src/mapLoader.s: src/mapLoader.cpp.s
+.PHONY : src/mapLoader.s
+
+# target to generate assembly for a file
+src/mapLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFMLProject.dir/build.make CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.s
+.PHONY : src/mapLoader.cpp.s
+
 src/math.o: src/math.cpp.o
 .PHONY : src/math.o
 
@@ -318,6 +342,9 @@ help:
 	@echo "... src/map.o"
 	@echo "... src/map.i"
 	@echo "... src/map.s"
+	@echo "... src/mapLoader.o"
+	@echo "... src/mapLoader.i"
+	@echo "... src/mapLoader.s"
 	@echo "... src/math.o"
 	@echo "... src/math.i"
 	@echo "... src/math.s"

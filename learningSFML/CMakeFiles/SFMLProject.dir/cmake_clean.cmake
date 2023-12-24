@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SFMLProject.dir/src/main.cpp.o.d"
   "CMakeFiles/SFMLProject.dir/src/map.cpp.o"
   "CMakeFiles/SFMLProject.dir/src/map.cpp.o.d"
+  "CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o"
+  "CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o.d"
   "CMakeFiles/SFMLProject.dir/src/math.cpp.o"
   "CMakeFiles/SFMLProject.dir/src/math.cpp.o.d"
   "CMakeFiles/SFMLProject.dir/src/player.cpp.o"

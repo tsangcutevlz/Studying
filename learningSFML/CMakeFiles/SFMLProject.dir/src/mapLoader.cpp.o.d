@@ -1,5 +1,7 @@
-CMakeFiles/SFMLProject.dir/src/main.cpp.o: \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/main.cpp \
+CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/mapLoader.cpp \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapLoader.h \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/map.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
@@ -808,13 +810,24 @@ CMakeFiles/SFMLProject.dir/src/main.cpp.o: \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/tile.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/player.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/skeleton.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/bullet.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/math.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/map.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/tile.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/frameRate.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapLoader.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iomanip \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/u8path.h

@@ -2,7 +2,9 @@
 #include "./characters/map.h"
 #include "./characters/tile.h"
 
-Map::Map() : tileWidth(16), tileHeight(16), totalTilesX(0), totalTilesY(0)
+Map::Map() : 
+tileWidth(16), tileHeight(16), totalTilesX(0), totalTilesY(0),
+totalTiles(0), mapWidth(3), mapHeight(2), tiles(nullptr) 
 {
 }
 Map::~Map()

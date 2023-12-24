@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/tsangcuteso1/Beginning/learningSFML/src/frameRate.cpp" "CMakeFiles/SFMLProject.dir/src/frameRate.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/frameRate.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/src/main.cpp" "CMakeFiles/SFMLProject.dir/src/main.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/main.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/src/map.cpp" "CMakeFiles/SFMLProject.dir/src/map.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/map.cpp.o.d"
+  "/Users/tsangcuteso1/Beginning/learningSFML/src/mapLoader.cpp" "CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/src/math.cpp" "CMakeFiles/SFMLProject.dir/src/math.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/math.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/src/player.cpp" "CMakeFiles/SFMLProject.dir/src/player.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/player.cpp.o.d"
   "/Users/tsangcuteso1/Beginning/learningSFML/src/skeleton.cpp" "CMakeFiles/SFMLProject.dir/src/skeleton.cpp.o" "gcc" "CMakeFiles/SFMLProject.dir/src/skeleton.cpp.o.d"
