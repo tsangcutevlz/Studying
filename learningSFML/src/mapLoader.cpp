@@ -18,10 +18,8 @@ MapLoader::~MapLoader()
 //     file.close();
 // }
 
-Mapdata MapLoader::Load(std::string filename)
+void MapLoader::Load(std::string filename, MapData &mapdata)
 {
-    MapData mapdata;
-
     std::string line;
     std::ifstream file(filename);
 
@@ -56,7 +54,7 @@ Mapdata MapLoader::Load(std::string filename)
                 {
                     if (variable == "version")
                     {
-                        mapdata.version = value;
+                        mapdata.version = std::stoi(value);
                     }
                     else if (variable == "tilesheet")
                     {
@@ -73,6 +71,14 @@ Mapdata MapLoader::Load(std::string filename)
                     else if (variable == "scale-y")
                     {
                         mapdata.scaleY = std::stoi(value);
+                    }
+                    else if (variable == "mapWidth")
+                    {
+                        mapdata.mapWidth = std::stoi(value);
+                    }
+                    else if (variable == "mapHeight")
+                    {
+                        mapdata.mapHeight = std::stoi(value);
                     }
                     else if (variable == "tile-height")
                     {

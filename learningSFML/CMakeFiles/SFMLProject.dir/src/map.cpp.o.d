@@ -811,4 +811,6 @@ CMakeFiles/SFMLProject.dir/src/map.cpp.o: \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapData.h \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapLoader.h \
   /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/tile.h

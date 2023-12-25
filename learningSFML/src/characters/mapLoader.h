@@ -1,6 +1,6 @@
 #pragma once
-#include "map.h"
 #include <iostream>
+#include "mapData.h"
 
 
 class MapLoader
@@ -10,6 +10,6 @@ public:
     MapLoader();
     ~MapLoader();
     // void Save(std::string filename);
-    Mapdata* Load(std::string filename);
+    void Load(std::string filename, MapData& mapdata);
 
 };

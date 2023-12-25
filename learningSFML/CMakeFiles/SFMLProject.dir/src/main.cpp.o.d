@@ -815,6 +815,7 @@ CMakeFiles/SFMLProject.dir/src/main.cpp.o: \
   /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/bullet.h \
   /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/math.h \
   /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/map.h \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapData.h \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapLoader.h \
   /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/tile.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/frameRate.h \
-  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapLoader.h
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/frameRate.h

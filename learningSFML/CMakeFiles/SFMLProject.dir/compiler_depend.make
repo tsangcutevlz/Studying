@@ -2366,6 +2366,7 @@ CMakeFiles/SFMLProject.dir/src/main.cpp.o: src/main.cpp \
   src/characters/bullet.h \
   src/characters/frameRate.h \
   src/characters/map.h \
+  src/characters/mapData.h \
   src/characters/mapLoader.h \
   src/characters/math.h \
   src/characters/player.h \
@@ -3184,6 +3185,8 @@ CMakeFiles/SFMLProject.dir/src/map.cpp.o: src/map.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
   src/characters/map.h \
+  src/characters/mapData.h \
+  src/characters/mapLoader.h \
   src/characters/tile.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
@@ -3266,7 +3269,6 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: src/mapLoader.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/AvailabilityVersions.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/TargetConditionals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_ctype.h \
@@ -3682,7 +3684,6 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: src/mapLoader.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__thread/timed_backoff_policy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__threading_support \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tuple \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/add_const.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/add_cv.h \
@@ -3858,7 +3859,6 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: src/mapLoader.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/mutex \
@@ -4015,86 +4015,8 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: src/mapLoader.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
-  src/characters/map.h \
   src/characters/mapData.h \
-  src/characters/mapLoader.h \
-  src/characters/tile.h \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/BlendMode.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/CircleShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Color.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/ConvexShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Drawable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Font.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glyph.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Image.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RectangleShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderStates.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTarget.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTexture.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderWindow.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shader.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Texture.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transform.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transformable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Vertex.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexArray.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/View.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Clock.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Err.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/FileInputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/InputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Lock.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/MemoryInputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Mutex.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/NonCopyable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Sleep.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocal.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Time.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Clipboard.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Context.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/ContextSettings.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Cursor.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Event.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/GlResource.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Joystick.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Keyboard.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Mouse.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Sensor.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Touch.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/VideoMode.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Vulkan.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Window.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowBase.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowHandle.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowStyle.hpp
+  src/characters/mapLoader.h
 
 CMakeFiles/SFMLProject.dir/src/math.cpp.o: src/math.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/Availability.h \

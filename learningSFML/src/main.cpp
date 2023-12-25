@@ -37,8 +37,7 @@ int main()
     FrameRate frameRate;
     Skeleton skeleton;
     Player player;
-    MapLoader mapLoader;
-    mapLoader.Load("./Assets/Map/Map1.txt");
+
     // --------------------------------- INITIALIZE ------------------------------------
     map.Initialize();
     frameRate.Initialize();
@@ -46,7 +45,7 @@ int main()
     skeleton.Initialize();
     // --------------------------------- INITIALIZE  ------------------------------------
     // --------------------------------- LOAD  ------------------------------------
-    map.Load();
+    map.Load("./Assets/Map/Map1.txt");
     frameRate.Load();
     player.Load();
     skeleton.Load();

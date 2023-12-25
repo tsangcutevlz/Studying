@@ -11,6 +11,10 @@ struct MapData
     unsigned int tileHeight = 0;
     int scaleX = 0;
     int scaleY = 0;
+
+    int mapWidth;
+    int mapHeight;
+
     int dataLength = 0;
     int* data = nullptr;
 };
