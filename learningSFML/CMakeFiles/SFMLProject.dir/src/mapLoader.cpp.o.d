@@ -813,6 +813,7 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: \
   /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/tile.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
+  /Users/tsangcuteso1/Beginning/learningSFML/src/./characters/mapData.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/copy_options.h \

@@ -4021,6 +4021,7 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h
  /Users/tsangcuteso1/Beginning/learningSFML/src/characters/map.h
+ /Users/tsangcuteso1/Beginning/learningSFML/src/characters/mapData.h
  /Users/tsangcuteso1/Beginning/learningSFML/src/characters/mapLoader.h
  /Users/tsangcuteso1/Beginning/learningSFML/src/characters/tile.h
  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp

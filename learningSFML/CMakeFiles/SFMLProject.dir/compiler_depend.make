@@ -4016,6 +4016,7 @@ CMakeFiles/SFMLProject.dir/src/mapLoader.cpp.o: src/mapLoader.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
   src/characters/map.h \
+  src/characters/mapData.h \
   src/characters/mapLoader.h \
   src/characters/tile.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp \
@@ -6995,6 +6996,8 @@ src/frameRate.cpp:
 /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/declval.h:
+
+src/characters/mapData.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/cmp.h:
 

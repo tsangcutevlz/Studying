@@ -3,11 +3,13 @@
 #include <iostream>
 
 
-class MapLoader{
+class MapLoader
+{
 private:
 public:
     MapLoader();
     ~MapLoader();
     // void Save(std::string filename);
-    void Load(std::string filename);
+    Mapdata* Load(std::string filename);
+
 };
