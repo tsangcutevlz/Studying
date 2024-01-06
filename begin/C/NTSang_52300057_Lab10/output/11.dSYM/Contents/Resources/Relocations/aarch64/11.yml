@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/tsangcuteso1/Beginning/begin/C/NTSang_52300057_Lab10/output/11'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _func, symObjAddr: 0x0, symBinAddr: 0x100003F48, symSize: 0x8 }
+  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: _func, symObjAddr: 0x0, symBinAddr: 0x100003F48, symSize: 0x8 }
+  - { offsetInCU: 0x61, offset: 0x61, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x8, symBinAddr: 0x100003F50, symSize: 0x40 }
+...
