@@ -39,7 +39,7 @@ int main()
     FILE *inputFile, *outputFile;
     int n, dc, dg, ld;
     char w[10];
-    if ((inputFile = fopen("input.inp", "r")) == NULL)
+    if ((inputFile = fopen("/Users/tsangcuteso1/Beginning/begin/baitaplon/input.inp", "r")) == NULL)
     {
         printf("Khong the mo tap tin input.inp\n");
         perror("Loi khi mo tap tin: ");
@@ -47,7 +47,7 @@ int main()
     }
     fscanf(inputFile, "%d %d %d %d %s", &n, &dc, &dg, &ld, &w);
     fclose(inputFile);
-    if ((outputFile = fopen("output.out", "w")) == NULL)
+    if ((outputFile = fopen("/Users/tsangcuteso1/Beginning/begin/baitaplon/output.out", "w")) == NULL)
     {
         printf("Khong the mo tap tin output.out\n");
         return 0;
@@ -79,7 +79,7 @@ int main()
     if (strstr(w, "Wind"))
     {
         double saveOfSave = save;
-        int saveLD = ld;
+        int saveLd = ld;
         int worstCase = 0;
         while (save > areaBC && ld >= 1)
         {
@@ -143,79 +143,64 @@ int main()
 
         if (worstCase == 1 && areaBG > areaBC)
         {
-            double max = 99999;
-
-            int saveAmountBG = 0;
-            int saveAmountBC = 0;
-
-            while (saveOfSave > areaBG && saveLD > 0)
+            save = saveOfSave;
+            amountBC = 0;
+            amountBG = 0;
+            ld = saveLd;
+            while (save > areaBG && ld >= 1)
             {
-
                 if (dg >= 5)
                 {
-                    saveOfSave -= areaBG;
-                    amountBG++;
-                    saveLD -= 2;
-
-                    double storeSave = saveOfSave;
-                    int storeLD = saveLD;
-                    while (storeSave > areaBC && storeLD > 0)
+                    if (ld >= 2)
                     {
-                        if (dc >= 8)
-                        {
-                            storeSave -= areaBC;
-                            saveAmountBC++;
-                            storeLD -= 2;
-                        }
-                        else
-                        {
-                            storeSave -= areaBC;
-                            saveAmountBC++;
-                            storeLD -= 1;
-                        }
+                        amountBG++;
+                        save -= areaBG;
+                        ld -= 2;
                     }
-
-                    if (max > storeSave)
-                    {
-                        max = storeSave;
-                        amountBC = saveAmountBC;
-                        saveAmountBG = amountBG;
-                    }
-                    saveAmountBC = 0;
+                    if (ld == 1)
+                        break;
                 }
                 else
                 {
-                    saveOfSave -= areaBG;
-                    amountBG++;
-                    saveLD -= 1;
-                    double storeSave = saveOfSave;
-                    int storeLD = saveLD;
-                    while (storeSave > areaBC && storeLD > 0)
+                    if (ld >= 1)
                     {
-                        if (dc >= 8)
-                        {
-                            storeSave -= areaBC;
-                            saveAmountBC++;
-                            storeLD -= 2;
-                        }
-                        else
-                        {
-                            storeSave -= areaBC;
-                            saveAmountBC++;
-                            storeLD -= 1;
-                        }
+                        amountBG++;
+                        save -= areaBG;
+                        ld -= 1;
                     }
-
-                    if (max > storeSave)
-                    {
-                        max = storeSave;
-                        amountBC = saveAmountBC;
-                        saveAmountBG = amountBG;
-                    }
-                    saveAmountBC = 0;
                 }
             }
-            fprintf(outputFile, "%d %d %.3f", amountBC, saveAmountBG, max);
+            while (save > areaBC && ld >= 1)
+            {
+                if (dc >= 8)
+                {
+                    if (ld >= 2)
+                    {
+                        amountBC++;
+                        save -= areaBC;
+                        ld -= 2;
+                    }
+                    if ((ld <= 1) && save > areaBC)
+                    {
+                        worstCase = 1;
+                        break;
+                    }
+                }
+                else
+                {
+                    if (ld >= 1)
+                    {
+                        amountBC++;
+                        save -= areaBC;
+                        ld -= 1;
+                    }
+                    if ((ld == 0) && save > areaBC)
+                    {
+                        worstCase = 1;
+                    }
+                }
+            }
+            fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
             fclose(outputFile);
         }
     }
@@ -252,9 +237,15 @@ int main()
             {
                 if (dc >= 8)
                 {
-                    save -= areaBC;
-                    amountBC++;
-                    ld -= 2;
+                    if (ld >= 2)
+                    {
+                        save -= areaBC;
+                        amountBC++;
+                        ld -= 2;
+                    }
+                    if(ld == 1){
+                        break;
+                    }
                 }
                 else
                 {
@@ -263,21 +254,69 @@ int main()
                     ld -= 1;
                 }
             }
-        }
-        else
-        {
             while (save > areaBG && ld >= 1)
             {
-                if (dc >= 8)
+                if (dg >= 5)
                 {
-                    save -= areaBG;
-                    amountBG++;
-                    ld -= 2;
+                    if (ld >= 2)
+                    {
+                        save -= areaBG;
+                        amountBG++;
+                        ld -= 2;
+                    }
+                    if(ld == 1){
+                        break;
+                    }
                 }
                 else
                 {
                     save -= areaBG;
                     amountBG++;
+                    ld -= 1;
+                }
+            }
+        }
+        else
+        {
+            while (save > areaBG && ld >= 1)
+            {
+                if (dg >= 5)
+                {
+                    if (ld >= 2)
+                    {
+                        save -= areaBG;
+                        amountBG++;
+                        ld -= 2;
+                    }
+                    if (ld == 1)
+                        break;
+                }
+                else
+                {
+                    save -= areaBG;
+                    amountBG++;
+                    ld -= 1;
+                }
+            }
+            while (save > areaBC && ld >= 1)
+            {
+                if (dc >= 8)
+                {
+                    if (ld >= 2)
+                    {
+
+                        save -= areaBC;
+                        amountBC++;
+                        ld -= 2;
+                    }
+                    if (ld == 1){
+                        break;
+                    }
+                }
+                else
+                {
+                    save -= areaBC;
+                    amountBC++;
                     ld -= 1;
                 }
             }
@@ -307,7 +346,6 @@ int main()
             save = (int)Rice;
         }
         ld -= X;
-        printf("save: %f", save);
         int weatherSub = (dc + dg) % 3;
         if (ld < 0)
         {
@@ -360,6 +398,21 @@ int main()
                         ld -= 1;
                     }
                 }
+                while (save > areaBG && ld >= 1)
+                {
+                    if (dc >= 8)
+                    {
+                        save -= areaBG;
+                        amountBG++;
+                        ld -= 2;
+                    }
+                    else
+                    {
+                        save -= areaBG;
+                        amountBG++;
+                        ld -= 1;
+                    }
+                }
             }
             else
             {
@@ -378,6 +431,21 @@ int main()
                         ld -= 1;
                     }
                 }
+                while (save > areaBC && ld >= 1)
+                {
+                    if (dc >= 8)
+                    {
+                        save -= areaBC;
+                        amountBC++;
+                        ld -= 2;
+                    }
+                    else
+                    {
+                        save -= areaBC;
+                        amountBC++;
+                        ld -= 1;
+                    }
+                }
             }
 
             fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
@@ -387,7 +455,7 @@ int main()
         {
             // Wind
             double saveOfSave = save;
-            int saveLD = ld;
+            int saveLd = ld;
             int worstCase = 0;
             while (save > areaBC && ld >= 1)
             {
@@ -451,79 +519,64 @@ int main()
 
             if (worstCase == 1 && areaBG > areaBC)
             {
-                double max = 99999;
-
-                int saveAmountBG = 0;
-                int saveAmountBC = 0;
-
-                while (saveOfSave > areaBG && saveLD > 0)
+                save = saveOfSave;
+                amountBC = 0;
+                amountBG = 0;
+                ld = saveLd;
+                while (save > areaBG && ld >= 1)
                 {
-
                     if (dg >= 5)
                     {
-                        saveOfSave -= areaBG;
-                        amountBG++;
-                        saveLD -= 2;
-
-                        double storeSave = saveOfSave;
-                        int storeLD = saveLD;
-                        while (storeSave > areaBC && storeLD > 0)
+                        if (ld >= 2)
                         {
-                            if (dc >= 8)
-                            {
-                                storeSave -= areaBC;
-                                saveAmountBC++;
-                                storeLD -= 2;
-                            }
-                            else
-                            {
-                                storeSave -= areaBC;
-                                saveAmountBC++;
-                                storeLD -= 1;
-                            }
+                            amountBG++;
+                            save -= areaBG;
+                            ld -= 2;
                         }
-
-                        if (max > storeSave)
-                        {
-                            max = storeSave;
-                            amountBC = saveAmountBC;
-                            saveAmountBG = amountBG;
-                        }
-                        saveAmountBC = 0;
+                        if (ld == 1)
+                            break;
                     }
                     else
                     {
-                        saveOfSave -= areaBG;
-                        amountBG++;
-                        saveLD -= 1;
-                        double storeSave = saveOfSave;
-                        int storeLD = saveLD;
-                        while (storeSave > areaBC && storeLD > 0)
+                        if (ld >= 1)
                         {
-                            if (dc >= 8)
-                            {
-                                storeSave -= areaBC;
-                                saveAmountBC++;
-                                storeLD -= 2;
-                            }
-                            else
-                            {
-                                storeSave -= areaBC;
-                                saveAmountBC++;
-                                storeLD -= 1;
-                            }
+                            amountBG++;
+                            save -= areaBG;
+                            ld -= 1;
                         }
-
-                        if (max > storeSave)
-                        {
-                            max = storeSave;
-                            amountBC = saveAmountBC;
-                            saveAmountBG = amountBG;
-                        }
-                        saveAmountBC = 0;
                     }
                 }
-                fprintf(outputFile, "%d %d %.3f", amountBC, saveAmountBG, max);
+                while (save > areaBC && ld >= 1)
+                {
+                    if (dc >= 8)
+                    {
+                        if (ld >= 2)
+                        {
+                            amountBC++;
+                            save -= areaBC;
+                            ld -= 2;
+                        }
+                        if ((ld <= 1) && save > areaBC)
+                        {
+                            worstCase = 1;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (ld >= 1)
+                        {
+                            amountBC++;
+                            save -= areaBC;
+                            ld -= 1;
+                        }
+                        if ((ld == 0) && save > areaBC)
+                        {
+                            worstCase = 1;
+                        }
+                    }
+                }
+                fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
                 fclose(outputFile);
             }
         }
@@ -538,27 +591,23 @@ int main()
             else
             {
                 double saveOfSave = save;
-                int saveLD = ld;
+                int saveLd = ld;
                 int worstCase = 0;
                 while (save > areaBG && ld >= 1)
                 {
-
                     if (dg >= 5)
                     {
                         if (ld >= 2)
                         {
                             amountBG++;
                             save -= areaBG;
+                            ld -= 2;
                         }
-                        if ((ld <= 0 || ld == 1) && save > areaBG)
+                        if ((ld <= 1) && save > areaBG)
                         {
                             worstCase = 1;
-                        }
-                        if (ld == 1)
-                        {
                             break;
                         }
-                        ld -= 2;
                     }
                     else
                     {
@@ -566,16 +615,12 @@ int main()
                         {
                             amountBG++;
                             save -= areaBG;
+                            ld -= 1;
                         }
-                        if ((ld <= 0 || ld == 1) && save > areaBG)
+                        if ((ld == 0) && save > areaBG)
                         {
                             worstCase = 1;
                         }
-                        if (ld == 1)
-                        {
-                            break;
-                        }
-                        ld -= 1;
                     }
                 }
                 while (save > areaBC && ld >= 1)
@@ -586,8 +631,10 @@ int main()
                         {
                             amountBC++;
                             save -= areaBC;
+                            ld -= 2;
                         }
-                        ld -= 2;
+                        if (ld == 1)
+                            break;
                     }
                     else
                     {
@@ -595,8 +642,8 @@ int main()
                         {
                             amountBC++;
                             save -= areaBC;
+                            ld -= 1;
                         }
-                        ld -= 1;
                     }
                 }
 
@@ -605,81 +652,67 @@ int main()
                     fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
                     fclose(outputFile);
                 }
+
                 if (worstCase == 1 && areaBC > areaBG)
                 {
-                    double max = 99999;
-                    int saveAmountBG = 0;
-                    int saveAmountBC = 0;
-                    amountBC = 0;
+                    save = saveOfSave;
                     amountBG = 0;
-                    while (saveOfSave > areaBC && saveLD > 0)
+                    amountBC = 0;
+                    ld = saveLd;
+                    while (save > areaBC && ld >= 1)
                     {
                         if (dc >= 8)
                         {
-                            saveOfSave -= areaBC;
-                            amountBC++;
-                            saveLD -= 2;
-                            double storeSave = saveOfSave;
-                            int storeLD = saveLD;
-                            while (storeSave > areaBG && storeLD > 0)
+                            if (ld >= 2)
                             {
-                                if (dg >= 5)
-                                {
-                                    storeSave -= areaBG;
-                                    saveAmountBG++;
-                                    storeLD -= 2;
-                                }
-                                else
-                                {
-                                    storeSave -= areaBG;
-                                    saveAmountBG++;
-                                    storeLD -= 1;
-                                }
+                                amountBC++;
+                                save -= areaBC;
+                                ld -= 2;
                             }
-
-                            if (max > storeSave)
-                            {
-                                max = storeSave;
-                                amountBG = saveAmountBG;
-                                saveAmountBC = amountBC;
-                            }
-                            // storeSave = saveOfSave;
-                            // storeLD = saveLD;
-                            saveAmountBG = 0;
+                            if (ld == 1)
+                                break;
                         }
                         else
                         {
-                            saveOfSave -= areaBC;
-                            amountBC++;
-                            saveLD -= 1;
-                            double storeSave = saveOfSave;
-                            int storeLD = saveLD;
-                            while (storeSave > areaBG && storeLD > 0)
+                            if (ld >= 1)
                             {
-                                if (dg >= 5)
-                                {
-                                    storeSave -= areaBG;
-                                    saveAmountBG++;
-                                    storeLD -= 2;
-                                }
-                                else
-                                {
-                                    storeSave -= areaBG;
-                                    saveAmountBG++;
-                                    storeLD -= 1;
-                                }
+                                amountBC++;
+                                save -= areaBC;
+                                ld -= 1;
                             }
-
-                            if (max > storeSave)
-                            {
-                                max = storeSave;
-                                amountBG = saveAmountBG;
-                                saveAmountBC = amountBC;
-                            }
-                            saveAmountBG = 0;
                         }
                     }
-                    fprintf(outputFile, "%d %d %.3f", saveAmountBC, amountBG, max);
+                    while (save > areaBG && ld >= 1)
+                    {
+                        if (dg >= 5)
+                        {
+                            if (ld >= 2)
+                            {
+                                amountBG++;
+                                save -= areaBG;
+                                ld -= 2;
+                            }
+                            if ((ld <= 1) && save > areaBG)
+                            {
+                                worstCase = 1;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            if (ld >= 1)
+                            {
+                                amountBG++;
+                                save -= areaBG;
+                                ld -= 1;
+                            }
+                            if ((ld == 0) && save > areaBG)
+                            {
+                                worstCase = 1;
+                            }
+                        }
+                    }
+                    fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
                     fclose(outputFile);
                 }
             }
@@ -938,7 +971,7 @@ int main()
         else
         {
             double saveOfSave = save;
-            int saveLD = ld;
+            int saveLd = ld;
             int worstCase = 0;
             while (save > areaBG && ld >= 1)
             {
@@ -948,16 +981,13 @@ int main()
                     {
                         amountBG++;
                         save -= areaBG;
+                        ld -= 2;
                     }
-                    if ((ld <= 0 || ld == 1) && save > areaBG)
+                    if ((ld <= 1) && save > areaBG)
                     {
                         worstCase = 1;
-                    }
-                    if (ld == 1)
-                    {
                         break;
                     }
-                    ld -= 2;
                 }
                 else
                 {
@@ -965,16 +995,12 @@ int main()
                     {
                         amountBG++;
                         save -= areaBG;
+                        ld -= 1;
                     }
-                    if ((ld <= 0 || ld == 1) && save > areaBG)
+                    if ((ld == 0) && save > areaBG)
                     {
                         worstCase = 1;
                     }
-                    if (ld == 1)
-                    {
-                        break;
-                    }
-                    ld -= 1;
                 }
             }
             while (save > areaBC && ld >= 1)
@@ -985,8 +1011,10 @@ int main()
                     {
                         amountBC++;
                         save -= areaBC;
+                        ld -= 2;
                     }
-                    ld -= 2;
+                    if (ld == 1)
+                        break;
                 }
                 else
                 {
@@ -994,8 +1022,8 @@ int main()
                     {
                         amountBC++;
                         save -= areaBC;
+                        ld -= 1;
                     }
-                    ld -= 1;
                 }
             }
 
@@ -1004,86 +1032,70 @@ int main()
                 fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
                 fclose(outputFile);
             }
+
             if (worstCase == 1 && areaBC > areaBG)
             {
-                double max = 99999;
-                int saveAmountBG = 0;
-                int saveAmountBC = 0;
-                amountBC = 0;
+                save = saveOfSave;
                 amountBG = 0;
-                while (saveOfSave > areaBC && saveLD > 0)
+                amountBC = 0;
+                ld = saveLd;
+                while (save > areaBC && ld >= 1)
                 {
-
                     if (dc >= 8)
                     {
-                        saveOfSave -= areaBC;
-                        amountBC++;
-                        saveLD -= 2;
-                        double storeSave = saveOfSave;
-                        int storeLD = saveLD;
-                        while (storeSave > areaBG && storeLD > 0)
+                        if (ld >= 2)
                         {
-                            if (dg >= 5)
-                            {
-                                storeSave -= areaBG;
-                                saveAmountBG++;
-                                storeLD -= 2;
-                            }
-                            else
-                            {
-                                storeSave -= areaBG;
-                                saveAmountBG++;
-                                storeLD -= 1;
-                            }
+                            amountBC++;
+                            save -= areaBC;
+                            ld -= 2;
                         }
-
-                        if (max > storeSave)
-                        {
-                            max = storeSave;
-                            amountBG = saveAmountBG;
-                            saveAmountBC = amountBC;
-                        }
-                        // storeSave = saveOfSave;
-                        // storeLD = saveLD;
-                        saveAmountBG = 0;
+                        if (ld == 1)
+                            break;
                     }
                     else
                     {
-                        saveOfSave -= areaBC;
-                        amountBC++;
-                        saveLD -= 1;
-                        double storeSave = saveOfSave;
-                        int storeLD = saveLD;
-                        while (storeSave > areaBG && storeLD > 0)
+                        if (ld >= 1)
                         {
-                            if (dg >= 5)
-                            {
-                                storeSave -= areaBG;
-                                saveAmountBG++;
-                                storeLD -= 2;
-                            }
-                            else
-                            {
-                                storeSave -= areaBG;
-                                saveAmountBG++;
-                                storeLD -= 1;
-                            }
+                            amountBC++;
+                            save -= areaBC;
+                            ld -= 1;
                         }
-
-                        if (max > storeSave)
-                        {
-                            max = storeSave;
-                            amountBG = saveAmountBG;
-                            saveAmountBC = amountBC;
-                        }
-                        saveAmountBG = 0;
                     }
                 }
-                fprintf(outputFile, "%d %d %.3f", saveAmountBC, amountBG, max);
+                while (save > areaBG && ld >= 1)
+                {
+                    if (dg >= 5)
+                    {
+                        if (ld >= 2)
+                        {
+                            amountBG++;
+                            save -= areaBG;
+                            ld -= 2;
+                        }
+                        if ((ld <= 1) && save > areaBG)
+                        {
+                            worstCase = 1;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (ld >= 1)
+                        {
+                            amountBG++;
+                            save -= areaBG;
+                            ld -= 1;
+                        }
+                        if ((ld == 0) && save > areaBG)
+                        {
+                            worstCase = 1;
+                        }
+                    }
+                }
+                fprintf(outputFile, "%d %d %.3f", amountBC, amountBG, save);
                 fclose(outputFile);
             }
         }
     }
-
     return 0;
 }
