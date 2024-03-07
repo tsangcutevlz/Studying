@@ -1,4 +1,5 @@
 import numpy as np
+from fractions import Fraction
 
 n = int(input("nhap n tu ban phim: "))
 
@@ -36,26 +37,28 @@ def ex2():
     vector_c = np.empty(n*2 + 1)
     vector_d = np.empty(n*2 + 1)
     vector_e = np.empty(n*2 + 1)
-    vector_f = np.empty(n)
-    vector_g = np.empty(n)
-    vector_h = np.empty(n)
+    vector_f = np.zeros(n, dtype=object)
+    vector_f[0] = 1
+    vector_g = np.zeros(n, dtype=object)
+    vector_h = np.zeros(n, dtype=object)
     vector_i = np.empty(n)
-    vector_j = np.empty(n)
-    vector_k = np.empty(n)
+    vector_j = np.zeros(n, dtype=object)
+    vector_k = np.zeros(n, dtype=object)
+    vector_k[0] = 0
     vector_l = [chr(i) for i in range(ord('a'), ord('z')+1)]
     vector_m = [chr(i) for i in range(ord('A'), ord('Z')+1)]
     a = 12
     b = 31
-    f = 1
+    f = 2
     j = 5
     jsub = 5
-    for i in np.arange(0, n, 1):
-        vector_a[i] = a + i*2
-        vector_b[i] = b + i*2
-        if (i != 0):
-            vector_f[i] = f/(i*2)
-        else:
-            vector_f[i] = f
+
+    for i in np.arange(1, n, 1):
+        numerator, denominator = float(1 / (f)).as_integer_ratio()
+        vector_f[i] = Fraction(numerator, denominator).limit_denominator() if i != 0 else Fraction(f)
+        f = f*2
+
+
     for i in np.arange(-n, n+1):
         vector_c[i + n] = i
     for i in np.arange(n, -n-1, -1):
@@ -70,12 +73,17 @@ def ex2():
         if (i == 0):
             vector_g[i] = 1
         else:
-            vector_g[i] = 1/dqb
+            numerator, denominator = float(1/dqb).as_integer_ratio()
+            vector_g[i] = Fraction(numerator, denominator).limit_denominator() if i != 0 else Fraction(f)
+            # vector_g[i] = 1/dqb
         dqa = dqb
         dqb = dqc
         dqc = dqa + dqb
     for i in np.arange(0, n, 1):
-        vector_h[i] = 1/findPrimeNumIndex(i + 1)
+        k = findPrimeNumIndex(i + 1)
+        numerator, denominator = float(1/k).as_integer_ratio()
+        vector_h[i] = Fraction(numerator, denominator).limit_denominator()
+
     for i in np.arange(0, n, 1):
         if (i == 0):
             vector_i[i] = 1
@@ -83,28 +91,29 @@ def ex2():
             vector_i[i] = vector_i[i-1] + (i+1)
     for i in np.arange(0, n, 1):
         if (i == 0):
-            vector_j[i] = 1/2
+            numerator, denominator = float(1/2).as_integer_ratio()
+            vector_j[i] = Fraction(numerator, denominator)
+
         else:
-            vector_j[i] = 1/j
+            numerator, denominator = float(1/j).as_integer_ratio()
+            vector_j[i] = Fraction(numerator, denominator).limit_denominator()
             j += jsub
             jsub += 2
-    for i in np.arange(0, n, 1):
-        if (i == 0):
-            vector_k[i] = 0
-        else:
-            vector_k[i] = i/(i+1)
+    for i in np.arange(1, n, 1):
+        numerator, denominator = float(i/(i+1)).as_integer_ratio()
+        vector_k[i] = Fraction(numerator, denominator).limit_denominator()
 
     print("cau 2a: ", vector_a)
     print("cau 2b: ", vector_b)
     print("cau 2c: ", vector_c)
     print("cau 2d: ", vector_d)
     print("cau 2e: ", vector_e)
-    print("cau 2f: ", vector_f)
-    print("cau 2g: ", vector_g)
-    print("cau 2h: ", vector_h)
+    print("cau 2f:", ', '.join(map(str, vector_f)))
+    print("cau 2g: ", ', '.join(map(str, vector_g)))
+    print("cau 2h: ", ', '.join(map(str, vector_h)))
     print("cau 2i: ", vector_i)
-    print("cau 2j: ", vector_j)
-    print("cau 2k: ", vector_k)
+    print("cau 2j: ", ', '.join(map(str, vector_j)))
+    print("cau 2k: ", ', '.join(map(str, vector_k)))    
     print("cau 2l: ", vector_l)
     print("cau 2m: ", vector_m)
 
